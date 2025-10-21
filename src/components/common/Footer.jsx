@@ -1,9 +1,18 @@
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <footer>
+      <Image
+      id="footer-moon"
+        width={1000}
+        height={1000}
+        src="/images/footer-moon.svg"
+        alt="moon"
+      />
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

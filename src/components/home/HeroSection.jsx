@@ -10,7 +10,7 @@ const HeroSection = () => {
           id="stars-hero-lg"
           width={1000}
           height={1000}
-          src="/images/Stars-lg.svg"
+          src="/images/stars-lg.svg"
           alt="stars"
         />
       </div>

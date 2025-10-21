@@ -68,15 +68,15 @@
   paint-order: stroke fill;
   text-transform: uppercase;
 }
-#store_btn_container{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 4rem;
+#store_btn_container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
 }
-#store_btn_container img{
-    height: 3.5rem;
-    width: auto;
+#store_btn_container img {
+  height: 3.5rem;
+  width: auto;
 }
 #ground_container {
   width: 100%;
@@ -103,4 +103,13 @@
   z-index: 3;
   bottom: 27%;
   left: 5%;
+}
+
+
+
+/* about_section */
+
+#about_section{
+  width: 100%;
+  height: 100vh;
 }

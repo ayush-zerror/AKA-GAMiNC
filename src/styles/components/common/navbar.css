@@ -22,6 +22,7 @@ nav img {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 #menu_btn span {
   height: 100%;
