@@ -8,7 +8,7 @@ const Footer = () => {
       id="footer-moon"
         width={1000}
         height={1000}
-        src="/images/footer-moon.svg"
+        src="/images/footermoon.svg"
         alt="moon"
       />
     </footer>
