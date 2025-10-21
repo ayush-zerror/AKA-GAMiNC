@@ -1,0 +1,106 @@
+#hero_section {
+  width: 100%;
+  min-height: 200vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 8rem;
+  position: relative;
+}
+#bg-hero {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+}
+#bg-hero #stars-hero-lg {
+  width: 100%;
+  height: auto;
+}
+
+#moon {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: -22rem;
+  position: relative;
+}
+#stars-hero-md {
+  width: 110%;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+}
+#moon-hero {
+  display: block;
+  width: 65%;
+  height: auto;
+  position: relative;
+}
+#gradient {
+  width: 85%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  position: absolute;
+  top: -28%;
+}
+
+#hero_content {
+  position: absolute;
+  top: 28%;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#hero_content h2 {
+  font-family: PlayPretend;
+  text-align: center;
+  font-weight: 400;
+  font-size: 7.5rem;
+  line-height: 1;
+  -webkit-text-stroke: 40px #053564;
+  color: #fff;
+  paint-order: stroke fill;
+  text-transform: uppercase;
+}
+#store_btn_container{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+#store_btn_container img{
+    height: 3.5rem;
+    width: auto;
+}
+#ground_container {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+#mountain {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: -6.2rem;
+  position: relative;
+}
+#land {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#stage {
+  width: 35%;
+  height: auto;
+  position: absolute;
+  z-index: 3;
+  bottom: 27%;
+  left: 5%;
+}
