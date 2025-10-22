@@ -8,7 +8,9 @@ const ConqureSection = () => {
         <div id="tv_content">
           <h2>Conquer.</h2>
           <h3>Collect.</h3>
-          <span id="custom"><span id="custom_bg"></span> Customize.</span>
+          <span id="custom">
+            <span id="custom_bg"></span> Customize.
+          </span>
         </div>
         <Image
           id="tv"
