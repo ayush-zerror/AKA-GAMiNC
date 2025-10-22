@@ -29,29 +29,73 @@ const WhySection = () => {
           <div className="card_wrapper">
             <div className="why_card">
               <p>
-                A sleek horizontal strip with glowing orbs for each skill — ⚡
-                Reaction Time, 🎯 Focus, 🔍 Logic, ➗ Computation, 📚 Knowledge
-                — pulsing like a sci-fi power meter over a deep navy,
-                particle-lit background.
+                A sleek horizontal strip with glowing orbs for each <br /> skill
+                — ⚡ Reaction Time, 🎯 Focus, 🔍 Logic, ➗ <br /> Computation,
+                📚 Knowledge — pulsing like a sci-fi power <br /> meter over a
+                deep navy, particle-lit background.
               </p>
+              <span id="card_tag"><span id="card_tag_bg"></span>Skill Boost</span>
+              <Image
+                id="card_arrow"
+                width={1000}
+                height={1000}
+                src="/images/arrow.svg"
+                alt="arrow"
+              />
+              <Image
+                id="card_gift"
+                width={1000}
+                height={1000}
+                src="/images/gift.svg"
+                alt="gift"
+              />
             </div>
           </div>
           <div className="card_wrapper">
             <div className="why_card">
               <p>
-                Express your unique identity with exclusive character skins,
-                rare cosmetic drops, and personalised style rewards that make
-                every victory look as good as it feels.
+                Express your unique identity with <br /> exclusive character
+                skins, rare cosmetic <br /> drops, and personalised style
+                rewards <br /> that make every victory look as <br /> good as it
+                feels.
               </p>
+              <span id="card_tag"><span id="card_tag_bg"></span>Custom Skins</span>
+
+              <div id="spinner_container">
+                <Image
+                  id="card_spinner"
+                  width={1000}
+                  height={1000}
+                  src="/images/spinner.svg"
+                  alt="spinner"
+                />
+              </div>
             </div>
           </div>
           <div className="card_wrapper">
             <div className="why_card">
               <p>
-                Level up and claim your glory — unlock premium prizes, power
-                boosts, and limited-edition gear that celebrate your grind and
-                skill.
+                Level up and claim your glory — unlock premium <br /> prizes,
+                power boosts, and limited-edition gear that <br /> celebrate
+                your grind and skill.
               </p>
+              <span id="card_tag"><span id="card_tag_bg"></span>Earn Rewards</span>
+              <div id="xp_container">
+                <Image
+                  id="card_xp"
+                  width={1000}
+                  height={1000}
+                  src="/images/xp.svg"
+                  alt="gift"
+                />
+                <Image
+                  id="card_gold"
+                  width={1000}
+                  height={1000}
+                  src="/images/sack.svg"
+                  alt="gold"
+                />
+              </div>
             </div>
           </div>
         </div>
