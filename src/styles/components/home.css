@@ -491,12 +491,40 @@
   top: -60%;
   left: 0;
 }
+#showcase_moon_container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6rem 0 8rem;
+  position: relative;
+}
 #showcase_moon {
   width: 60%;
   height: auto;
   display: block;
   position: relative;
-  margin: 6rem 0 8rem;
+}
+#showcase_slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+}
+.showcase_card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.showcase_card .card_bg{
+  width: 450px;
+  height: auto;
+  display: block;
 }
 
 /* Conqure_section */
@@ -709,4 +737,20 @@
   top: 0;
   background-color: #014985;
   z-index: -1;
+}
+
+#book_container{
+  width: 100%;
+  height: auto;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#book_container #book{
+  width: auto;
+  height: 105vh;
+  object-fit: contain;
+  transform: rotate(-7deg);
 }

@@ -21,7 +21,18 @@ const StorySection = () => {
       <div id="story_overlay">
         <h2>The Story</h2>
         <h3>Behind</h3>
-        <span id="hyst"><span id="hyst-bg"></span> Hyst</span>
+        <span id="hyst">
+          <span id="hyst-bg"></span> Hyst
+        </span>
+        <div id="book_container">
+          <Image
+            id="book"
+            width={1000}
+            height={1000}
+            src="/images/book.svg"
+            alt="book"
+          />
+        </div>
       </div>
     </div>
   );
