@@ -18,6 +18,14 @@ const WhySection = () => {
         src="/images/shadow-story.svg"
         alt="why-shadow"
       />
+      <div id="why_content">
+        <div id="why_title">
+          <h2>Why play </h2>
+          <span id="why_hyst">
+            <span id="why_hyst_bg"></span> Hyst
+          </span>
+        </div>
+      </div>
     </div>
   );
 };

@@ -235,6 +235,60 @@
   display: block;
 }
 
+#why_content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16rem;
+}
+#why_title{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#why_title h2 {
+  font-family: Changes;
+  font-weight: 400;
+  font-size: 5.5rem;
+  color: #fff;
+  position: relative;
+  line-height: 0.8;
+  z-index: 2;
+  rotate: 3deg;
+  -webkit-text-stroke: 3px #CBE6FC;
+  paint-order: stroke fill;
+}
+
+#why_title #why_hyst {
+  font-family: PlayPretend;
+  font-weight: 400;
+  font-size: 4.5rem;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  line-height: 1;
+  z-index: 2;
+  -webkit-text-stroke: 1px #FC6E60;
+  padding: 0.2rem 1.5rem 0;
+  display: inline-block;
+  transform: translateY(8%) translateX(-2%) rotate(-7deg);
+}
+
+#why_hyst_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #FDAB18;
+  z-index: -1;
+}
 /* showcase_section */
 
 #showcase_section {

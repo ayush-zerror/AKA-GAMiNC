@@ -9,7 +9,7 @@ const Navbar = () => {
         <Image
           width={1000}
           height={1000}
-          src="/images/aka-logo.png"
+          src="/images/aka-logo.svg"
           alt="aka-logo"
         />
       </Link>
