@@ -34,7 +34,7 @@ nav img {
 }
 
 /* --- base span style --- */
-#menu_btn div{
+#menu_btn div {
   height: 100%;
 }
 #menu_btn div > span {
@@ -52,16 +52,19 @@ nav img {
   -webkit-text-stroke: 3px #000;
   paint-order: stroke fill;
   color: #fff;
-  transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.35s ease;
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1),
+              opacity 0.35s ease;
   position: relative;
 }
+
 #home {
   position: absolute;
   opacity: 0 !important;
   transition: opacity 0.35s ease;
   background-color: #fad900;
 }
-#menu_btn:hover #home {
+#menu_btn:hover #home,
+#menu_btn.active #home {
   opacity: 1 !important;
 }
 
@@ -70,42 +73,44 @@ nav img {
   opacity: 1;
 }
 
-/* ---------- EXPANDING ---------- */
-#menu_btn:hover {
+/* ---------- EXPANDING (hover or active) ---------- */
+#menu_btn:hover,
+#menu_btn.active {
   width: calc(90px * 4);
   transition-delay: 0s;
 }
 
-#menu_btn:hover span {
+#menu_btn:hover span,
+#menu_btn.active span {
   opacity: 1;
 }
 
 /* tighter stagger for faster flow */
-#menu_btn:hover span:nth-child(2) {
+#menu_btn:hover span:nth-child(2),
+#menu_btn.active span:nth-child(2) {
   transition-delay: 0.03s;
 }
-#menu_btn:hover span:nth-child(3) {
+#menu_btn:hover span:nth-child(3),
+#menu_btn.active span:nth-child(3) {
   transition-delay: 0.06s;
 }
-#menu_btn:hover span:nth-child(4) {
+#menu_btn:hover span:nth-child(4),
+#menu_btn.active span:nth-child(4) {
   transition-delay: 0.09s;
 }
 
 /* ---------- COLLAPSING ---------- */
-#menu_btn:not(:hover) span:nth-child(4) {
+#menu_btn:not(:hover):not(.active) span:nth-child(4) {
   transition-delay: 0s;
-
 }
-#menu_btn:not(:hover) span:nth-child(3) {
+#menu_btn:not(:hover):not(.active) span:nth-child(3) {
   transition-delay: 0.03s;
-
 }
-#menu_btn:not(:hover) span:nth-child(2) {
+#menu_btn:not(:hover):not(.active) span:nth-child(2) {
   transition-delay: 0.06s;
-
 }
 
 /* compress after text exits */
-#menu_btn:not(:hover) {
+#menu_btn:not(:hover):not(.active) {
   transition-delay: 0s;
 }
