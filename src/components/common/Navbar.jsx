@@ -2,7 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({ sections }) => {
+  const handleScroll = (ref) => {
+    if (ref?.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav>
       <Link href="/" id="nav_logo">
@@ -14,18 +20,18 @@ const Navbar = () => {
         />
       </Link>
       <div id="menu_btn">
-        <div>
+        <div onClick={() => handleScroll(sections.home)}>
           <span>
             Menu <span id="home">Home</span>
           </span>
         </div>
-        <div>
+        <div onClick={() => handleScroll(sections.about)}>
           <span>About</span>
         </div>
-        <div>
+        <div onClick={() => handleScroll(sections.games)}>
           <span>Games</span>
         </div>
-        <div>
+        <div onClick={() => handleScroll(sections.skin)}>
           <span>Skin</span>
         </div>
       </div>
