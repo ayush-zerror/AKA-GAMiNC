@@ -337,6 +337,20 @@
   left: -5%;
   bottom: -15%;
 }
+#card_arrow,
+#card_gift,
+#card_gold {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: center;
+}
+
+/* hover bounce effect */
+#card_arrow:hover,
+#card_gift:hover,
+#card_gold:hover {
+  transform: scale(1.15);
+}
+
 .card_wrapper:nth-child(2) {
   display: flex;
   justify-content: flex-end;
@@ -362,7 +376,21 @@
   position: absolute;
   top: -105%;
   right: -30%;
+  animation: spin 20s linear infinite;
 }
+#card_spinner:hover{
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .card_wrapper:nth-child(3) {
   display: flex;
   justify-content: center;
