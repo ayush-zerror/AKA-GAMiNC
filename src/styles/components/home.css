@@ -345,9 +345,9 @@
 }
 
 /* hover bounce effect */
-#card_arrow:hover,
-#card_gift:hover,
-#card_gold:hover {
+.why_card:hover #card_arrow,
+.why_card:hover #card_gift,
+.why_card:hover #card_gold {
   transform: scale(1.15);
 }
 
