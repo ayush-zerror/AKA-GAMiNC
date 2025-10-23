@@ -5,7 +5,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <nav>
-      <Link href="/">
+      <Link href="/" id="nav_logo">
         <Image
           width={1000}
           height={1000}

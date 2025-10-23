@@ -7,6 +7,10 @@ nav {
   position: fixed;
   top: 0;
   z-index: 9;
+  pointer-events: none;
+}
+#nav_logo{
+  pointer-events: all;
 }
 
 nav img {
@@ -14,6 +18,7 @@ nav img {
   width: auto;
 }
 #menu_btn {
+  pointer-events: all;
   border-radius: 6px;
   display: flex;
   align-items: center;
