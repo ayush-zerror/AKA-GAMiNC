@@ -118,7 +118,9 @@ const HeroSection = () => {
           alt="moon"
           priority
         />
-        <div id="hero_content">
+      
+      </div>
+  <div id="hero_content">
           <h2>
             Step into <br /> the <br /> world of <br /> Gaming
           </h2>
@@ -141,8 +143,6 @@ const HeroSection = () => {
             </Link>
           </div>
         </div>
-      </div>
-
       <div id="ground_container" style={{ willChange: "transform" }}>
         <Image
           id="mountain"
