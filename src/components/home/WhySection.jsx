@@ -39,14 +39,14 @@ const WhySection = () => {
                 id="card_arrow"
                 width={1000}
                 height={1000}
-                src="/images/arrow.svg"
+                src="/images/arrow.webp"
                 alt="arrow"
               />
               <Image
                 id="card_gift"
                 width={1000}
                 height={1000}
-                src="/images/gift.svg"
+                src="/images/gift.webp"
                 alt="gift"
               />
             </div>
@@ -66,7 +66,7 @@ const WhySection = () => {
                   id="card_spinner"
                   width={1000}
                   height={1000}
-                  src="/images/spinner.svg"
+                  src="/images/spinner.webp"
                   alt="spinner"
                 />
               </div>
@@ -85,14 +85,14 @@ const WhySection = () => {
                   id="card_xp"
                   width={1000}
                   height={1000}
-                  src="/images/xp.svg"
+                  src="/images/xp.webp"
                   alt="gift"
                 />
                 <Image
                   id="card_gold"
                   width={1000}
                   height={1000}
-                  src="/images/sack.svg"
+                  src="/images/sack.webp"
                   alt="gold"
                 />
               </div>

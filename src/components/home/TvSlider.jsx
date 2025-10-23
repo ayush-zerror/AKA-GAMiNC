@@ -4,16 +4,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const slidesData = [
-  { bgColor: "#FF8112", borderColor: "#FFBA7C", character: "/images/characters/character1.svg" },
-  { bgColor: "#9BCB62", borderColor: "#CBF49B", character: "/images/characters/character2.svg" },
-  { bgColor: "#1EAFD6", borderColor: "#76E2FF", character: "/images/characters/character3.svg" },
-  { bgColor: "#9BCB62", borderColor: "#CBF49B", character: "/images/characters/character4.svg" },
-  { bgColor: "#FF8112", borderColor: "#FFBA7C", character: "/images/characters/character5.svg" },
-  { bgColor: "#9BCB62", borderColor: "#CBF49B", character: "/images/characters/character2.svg" },
-  { bgColor: "#FF8112", borderColor: "#FFBA7C", character: "/images/characters/character1.svg" },
-  { bgColor: "#1EAFD6", borderColor: "#76E2FF", character: "/images/characters/character3.svg" },
-  { bgColor: "#FF8112", borderColor: "#FFBA7C", character: "/images/characters/character5.svg" },
-  { bgColor: "#9BCB62", borderColor: "#CBF49B", character: "/images/characters/character4.svg" },
+  { bgColor: "#FF8112", borderColor: "#FFBA7C", character: "/images/characters/character1.webp" },
+  { bgColor: "#9BCB62", borderColor: "#CBF49B", character: "/images/characters/character2.webp" },
+  { bgColor: "#1EAFD6", borderColor: "#76E2FF", character: "/images/characters/character3.webp" },
+  { bgColor: "#9BCB62", borderColor: "#CBF49B", character: "/images/characters/character4.webp" },
+  { bgColor: "#FF8112", borderColor: "#FFBA7C", character: "/images/characters/character5.webp" },
+  { bgColor: "#9BCB62", borderColor: "#CBF49B", character: "/images/characters/character2.webp" },
+  { bgColor: "#FF8112", borderColor: "#FFBA7C", character: "/images/characters/character1.webp" },
+  { bgColor: "#1EAFD6", borderColor: "#76E2FF", character: "/images/characters/character3.webp" },
+  { bgColor: "#FF8112", borderColor: "#FFBA7C", character: "/images/characters/character5.webp" },
+  { bgColor: "#9BCB62", borderColor: "#CBF49B", character: "/images/characters/character4.webp" },
 ];
 
 const TvSlider = () => {
