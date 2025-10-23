@@ -773,12 +773,70 @@
 }
 
 #book_container{
-  width: 100%;
+  width:fit-content;
   height: auto;
   margin-top: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+#book-page1{
+  height: 80%;
+  width: 88%;
+  position: absolute;
+  top: 2%;
+  left: 48.2%;
+  transform: rotate(-7deg) translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:0 2rem;
+}
+.page_book{
+  width: 43%;
+  height: 100%;
+  position: relative;
+}
+
+#earth{
+  height: 10.2rem;
+  width: auto;
+  position: absolute;
+  top: 9rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#book_card{
+  height: 16rem;
+  width: auto;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#bookmoon{
+  height: 20rem;
+  width: auto;
+  position: absolute;
+  top: 7rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.page_book .lines_book{
+  width: 100%;
+  height: 2rem;
+  padding: 1.5rem;
+  display: block;
+  border-bottom: 0.1vw solid #686868;
+   font-family: AldotheApache;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1;
+  color: #082954;
+  white-space: nowrap;
 }
 
 #book_container #book{
@@ -786,4 +844,52 @@
   height: 105vh;
   object-fit: contain;
   transform: rotate(-7deg);
+}
+
+#astro1{
+  height: 8rem;
+  width: auto;
+  display: block;
+  position: absolute;
+  top: -17%;
+  right: -6%;
+}
+#astro2{
+  height: 8rem;
+  width: auto;
+  display: block;
+  position: absolute;
+  bottom: -3%;
+  left: -2%;
+}
+#astro3{
+  height: 8rem;
+  width: auto;
+  display: block;
+  position: absolute;
+  bottom: -13%;
+  right: -7%;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* move up slightly */
+  }
+}
+
+#astro1 {
+  animation: float 2s ease-in-out infinite;
+}
+
+#astro2 {
+  animation: float 2.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+#astro3 {
+  animation: float 2.2s ease-in-out infinite;
+  animation-delay: 0.2s;
 }
