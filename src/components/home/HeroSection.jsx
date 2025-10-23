@@ -35,6 +35,7 @@ const HeroSection = () => {
           height={1000}
           src="/images/white-moon.svg"
           alt="moon"
+          priority
         />
         <div id="hero_content">
           <h2>
