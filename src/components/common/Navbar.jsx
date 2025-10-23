@@ -14,7 +14,20 @@ const Navbar = () => {
         />
       </Link>
       <div id="menu_btn">
-        <span>Menu</span>
+        <div>
+          <span>
+            Menu <span id="home">Home</span>
+          </span>
+        </div>
+        <div>
+          <span>About</span>
+        </div>
+        <div>
+          <span>Games</span>
+        </div>
+        <div>
+          <span>Skin</span>
+        </div>
       </div>
     </nav>
   );
