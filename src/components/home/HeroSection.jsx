@@ -37,7 +37,7 @@ const HeroSection = () => {
           id="stars-hero-lg"
           width={600}
           height={600}
-          src="/images/stars-lg.svg"
+          src="/images/stars-lg.webp"
           alt="stars"
           priority
         />
@@ -47,7 +47,7 @@ const HeroSection = () => {
           id="stars-hero-md"
           width={500}
           height={500}
-          src="/images/Stars.svg"
+          src="/images/Stars.webp"
           alt="stars"
         />
         <Image

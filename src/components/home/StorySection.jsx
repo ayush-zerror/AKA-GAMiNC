@@ -15,7 +15,7 @@ const StorySection = () => {
         id="story-star-lg"
         width={1000}
         height={1000}
-        src="/images/stars-lg.svg"
+        src="/images/stars-lg.webp"
         alt="star-lg"
       />
       <div id="story_overlay">

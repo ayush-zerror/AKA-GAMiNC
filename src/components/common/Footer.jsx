@@ -63,7 +63,7 @@ const Footer = () => {
         id="story-star-sm"
         width={1000}
         height={1000}
-        src="/images/Stars.svg"
+        src="/images/Stars.webp"
         alt="star-sm"
       />
     </footer>
