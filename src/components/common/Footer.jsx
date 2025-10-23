@@ -9,7 +9,7 @@ const Footer = () => {
         id="footer-moon"
         width={1000}
         height={1000}
-        src="/images/footermoon.svg"
+        src="/images/footermoon.webp"
         alt="moon"
       />
       <div id="footer_overlay">

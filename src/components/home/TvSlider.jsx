@@ -56,7 +56,7 @@ const TvSlider = () => {
                 className="shadow"
                 width={1000}
                 height={1000}
-                src="/images/shadow-story.svg"
+                src="/images/shadow-story.webp"
                 alt="shadow"
               />
               <Image

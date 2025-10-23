@@ -20,7 +20,7 @@ const ShowcaseSection = () => {
           id="showcase_moon"
           width={1000}
           height={1000}
-          src="/images/showcase-moon.svg"
+          src="/images/showcase-moon.webp"
           alt="moon"
         />
         <div id="showcase_slider">

@@ -19,7 +19,7 @@ const ConqureSection = () => {
           id="tv"
           width={1000}
           height={1000}
-          src="/images/tv-box.svg"
+          src="/images/tv-box.webp"
           alt="tv"
         />
       </div>
@@ -27,7 +27,7 @@ const ConqureSection = () => {
         id="tv_frame"
         width={1000}
         height={1000}
-        src="/images/conqure-frame.svg"
+        src="/images/conqure-frame.webp"
         alt="frame"
       />
     </div>

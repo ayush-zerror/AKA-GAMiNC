@@ -15,7 +15,7 @@ const WhySection = () => {
         id="why_shadow"
         width={1000}
         height={1000}
-        src="/images/shadow-story.svg"
+        src="/images/shadow-story.webp"
         alt="why-shadow"
       />
       <div id="why_content">

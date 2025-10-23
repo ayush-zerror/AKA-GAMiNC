@@ -8,7 +8,7 @@ const StorySection = () => {
         id="shadow-story"
         width={1000}
         height={1000}
-        src="/images/shadow-story.svg"
+        src="/images/shadow-story.webp"
         alt="shadow"
       />
       <Image
@@ -29,7 +29,7 @@ const StorySection = () => {
             id="book"
             width={1000}
             height={1000}
-            src="/images/book.svg"
+            src="/images/book.webp"
             alt="book"
           />
         </div>

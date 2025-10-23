@@ -89,6 +89,7 @@
   display: block;
   margin-bottom: -6.2rem;
   position: relative;
+  z-index: 2;
 }
 #land {
   width: 100%;
