@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,27 +13,78 @@ const HeroSection = () => {
   const mountainRef = useRef(null);
   const landRef = useRef(null);
   const stageRef = useRef(null);
+  const starsRef = useRef(null); // for background stars
 
-  useEffect(() => {
+  useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: heroRef.current,
         start: "top top",
         end: "bottom top",
-        scrub: 1.2, // smooth scroll
+        scrub: 2,
       },
     });
 
-    // Premium parallax: slowest layer farthest, fastest layer closest
-    tl.to(moonRef.current, { y: -100, scale: 1.02, ease: "power1.out" }, 0)
-      .to(mountainRef.current, { y: -150, ease: "power1.out" }, 0)
-      .to(landRef.current, { y: -250, ease: "power1.out" }, 0)
-      .to(stageRef.current, { y: -100, ease: "power1.out" }, 0);
+    // Background stars: subtle slow parallax
+    tl.to(starsRef.current, {
+      y: -30,
+      x: 10,
+      rotation: 1,
+      ease: "power1.out",
+    }, 0);
+
+    // Moon layer: move + rotate for 3D feel
+    tl.to(moonRef.current, {
+      y: -160,
+      x: 35,
+      z: 10,
+      scale: 1.06,
+      rotationY: 6,
+      rotationX: 2,
+      ease: "power1.out",
+    }, 0);
+
+    // Mountain layer
+    tl.to(mountainRef.current, {
+      y: -240,
+      x: 25,
+      z: 5,
+      rotationY: 4,
+      rotationX: 1,
+      ease: "power1.out",
+    }, 0);
+
+    // Land layer
+    tl.to(landRef.current, {
+      y: -160,
+      x: -15,
+      z: 3,
+      rotationY: -2,
+      rotationX: -1,
+      ease: "power1.out",
+    }, 0);
+
+    // Stage layer
+    tl.to(stageRef.current, {
+      y: -90,
+      x: -25,
+      z: 0,
+      rotationY: -5,
+      rotationX: -2,
+      ease: "power1.out",
+    }, 0);
   }, []);
 
   return (
-    <div id="hero_section" ref={heroRef} style={{ overflow: "hidden" }}>
-      <div id="bg-hero">
+    <div
+      id="hero_section"
+      ref={heroRef}
+      style={{
+        overflow: "hidden",
+        perspective: "1500px", // stronger 3D effect
+      }}
+    >
+      <div id="bg-hero" ref={starsRef}>
         <Image
           id="stars-hero-lg"
           width={600}
@@ -42,6 +94,7 @@ const HeroSection = () => {
           priority
         />
       </div>
+
       <div id="moon" ref={moonRef} style={{ willChange: "transform" }}>
         <Image
           id="stars-hero-md"
@@ -89,6 +142,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
       <div id="ground_container" style={{ willChange: "transform" }}>
         <Image
           id="mountain"
@@ -110,7 +164,7 @@ const HeroSection = () => {
           id="stage"
           width={700}
           height={250}
-          src="/images/stage.svg"
+          src="/images/stage.webp"
           alt="stage"
           ref={stageRef}
         />
