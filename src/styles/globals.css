@@ -24,6 +24,7 @@ body {
 main{
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 ::-webkit-scrollbar{
@@ -33,4 +34,13 @@ main{
 ::-webkit-scrollbar-thumb{
   background-color: #fff;
   border-radius: 50px;
+}
+
+#astronaut{
+  position: absolute;
+  top:9%;
+  left: 15.7%;
+  width: auto;
+  height:13rem;
+  z-index: 9;
 }
