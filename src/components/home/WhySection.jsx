@@ -17,6 +17,13 @@ const WhySection = () => {
         <span id="why_hyst">
           <span id="why_hyst_bg"></span> Hyst
         </span>
+        <Image
+          id="why_astro"
+          width={1000}
+          height={1000}
+          src="/images/why-astro.png"
+          alt="astronaut"
+        />
       </div>
       <div id="why_cards">
         <div className="card_wrapper">

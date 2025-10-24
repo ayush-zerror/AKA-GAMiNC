@@ -268,7 +268,33 @@
   position: relative;
   display: flex;
   align-items: center;
+  z-index: 9;
 }
+#why_astro {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-15%);
+  height: 22rem;
+  width: auto;
+  display: block;
+
+  /* Add vertical floating animation */
+  animation: floatUpDown 3s ease-in-out infinite alternate;
+}
+
+/* Keyframes for up-down movement */
+@keyframes floatUpDown {
+  0% {
+    transform: translateX(-50%) translateY(-15%);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-25%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-15%);
+  }
+}
+
 #why_title h2 {
   font-family: Changes;
   font-weight: 400;
