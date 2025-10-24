@@ -8,13 +8,6 @@ const ShowcaseSection = () => {
       <h3>
         <span></span>Showcase
       </h3>
-      <Image
-        id="showcase_gradient"
-        width={1000}
-        height={1000}
-        src="/images/showcase-gradient.svg"
-        alt="gradient"
-      />
       <div id="showcase_moon_container">
         <Image
           id="showcase_moon"

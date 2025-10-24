@@ -19,18 +19,26 @@ html,
 body {
   width: 100%;
   height: 100%;
-  /* background: radial-gradient(
+  background-color: #021d32;
+}
+#start_container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: radial-gradient(
     circle at center,
     #06407c 0%,
     #032a4d 40%,
     #000910 100%
-    ); */
-    background-color: #021d32;
+  );
 }
 main {
   width: 100%;
   overflow: hidden;
   position: relative;
+  pointer-events: none;
 }
 
 ::-webkit-scrollbar {
@@ -41,4 +49,3 @@ main {
   background-color: #fff;
   border-radius: 50px;
 }
-

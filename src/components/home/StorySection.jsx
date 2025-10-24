@@ -11,13 +11,6 @@ const StorySection = () => {
         src="/images/shadow-story.webp"
         alt="shadow"
       />
-      <Image
-        id="story-star-lg"
-        width={1000}
-        height={1000}
-        src="/images/stars-lg.webp"
-        alt="star-lg"
-      />
       <div id="story_overlay">
         <h2>The Story</h2>
         <h3>Behind</h3>

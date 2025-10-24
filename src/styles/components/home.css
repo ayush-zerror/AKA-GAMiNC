@@ -132,15 +132,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
-#about_gradient {
-  width: 70%;
-  height: auto;
-  position: absolute;
-  left: 50%;
-  top: -50%;
-  transform: translateX(-50%);
-  z-index: -1;
-}
+
 #about_top {
   width: 100%;
   position: relative;
@@ -250,15 +242,6 @@
   flex-direction: column;
   align-items: center;
   padding: 65vh 0 30vh;
-}
-#why_star {
-  width: 100%;
-  height: auto;
-  display: block;
-  position: absolute;
-  top: 40%;
-  left: 0;
-  z-index: -1;
 }
 
 #why_title {
@@ -377,6 +360,7 @@
   font-size: 1.3rem;
   color: #fff;
   position: relative;
+  pointer-events: all;
 }
 .card_wrapper:nth-child(1) .why_card {
   background-color: #a4bd3b;
@@ -577,14 +561,7 @@
   z-index: -1;
 }
 
-#showcase_gradient {
-  width: 100%;
-  height: auto;
-  display: block;
-  position: absolute;
-  top: -60%;
-  left: 0;
-}
+
 #showcase_moon_container {
   width: 100%;
   display: flex;
@@ -626,6 +603,7 @@
   width: 100%;
   position: relative;
   z-index: 3;
+  pointer-events: all;
 }
 
 #tv_container {

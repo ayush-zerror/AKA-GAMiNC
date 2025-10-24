@@ -59,13 +59,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-         <Image
-        id="story-star-sm"
-        width={1000}
-        height={1000}
-        src="/images/Stars.webp"
-        alt="star-sm"
-      />
     </footer>
   );
 };

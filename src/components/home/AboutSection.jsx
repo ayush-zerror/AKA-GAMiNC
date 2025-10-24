@@ -125,13 +125,6 @@ const AboutSection = () => {
 
   return (
     <div id="about_section" ref={sectionRef}>
-      <Image
-        id="about_gradient"
-        width={1000}
-        height={1000}
-        src="/images/about-gradient.svg"
-        alt="gradient"
-      />
       <div id="about_top">
         <div id="tag_about" ref={tagRef}>
           <Image
