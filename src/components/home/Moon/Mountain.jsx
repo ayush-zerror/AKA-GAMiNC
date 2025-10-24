@@ -69,14 +69,10 @@ const Mountain = () => {
         src="/images/ground.webp"
         alt="land"
       />
-      <Image
-        ref={stageRef}
-        id="stage"
-        width={700}
-        height={250}
-        src="/images/stage.webp"
-        alt="stage"
-      />
+      <div ref={stageRef} id="stage">
+        <Image id="stage_platform" width={700} height={250} src="/images/stage.webp" alt="stage" />
+        <Image id="astronaut" width={700} height={250} src="/images/astronaut.png" alt="astronaut" />
+      </div>
     </div>
   );
 };

@@ -90,6 +90,36 @@
   left: 5%;
 }
 
+#stage #stage_platform{
+  width: 100%;
+  height: auto;
+}
+#astronaut {
+  width: auto;
+  height: 13rem;
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: -25%;
+  left: 33.5%;
+  transform: translateX(-50%);
+  
+  /* Animation */
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-25px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
 /* about_section */
 
 #about_section {
