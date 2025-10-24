@@ -251,7 +251,6 @@
   z-index: -1;
 }
 
-
 #why_title {
   position: relative;
   display: flex;
@@ -324,7 +323,6 @@
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-
 
 .card_wrapper {
   width: 100%;

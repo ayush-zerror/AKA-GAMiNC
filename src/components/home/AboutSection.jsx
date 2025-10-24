@@ -1,39 +1,118 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
 import Image from "next/image";
 import React, { useRef } from "react";
-gsap.registerPlugin(ScrollTrigger);
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
+
 const AboutSection = () => {
   const sectionRef = useRef(null);
   const moonRef = useRef(null);
   const text1Ref = useRef(null);
   const text2Ref = useRef(null);
+  const titleRef = useRef(null);
+  const playRef = useRef(null);
+  const playBgRef = useRef(null);
+  const tagRef = useRef(null); // tag reference
+
   useGSAP(() => {
-    if (
-      !sectionRef.current ||
-      !moonRef.current ||
-      !text1Ref.current ||
-      !text2Ref.current
-    )
-      return;
+    const initAnimations = () => {
+      if (
+        !sectionRef.current ||
+        !moonRef.current ||
+        !text1Ref.current ||
+        !text2Ref.current ||
+        !titleRef.current ||
+        !playRef.current ||
+        !playBgRef.current ||
+        !tagRef.current
+      )
+        return;
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: 1,
-        pin: true,
-        // markers: true, // enable only for debugging
-      },
-    });
+      // Split text into lines
+      const splitTitle = new SplitText(titleRef.current, { type: "lines" });
+      const splitText1 = new SplitText(text1Ref.current, { type: "lines" });
+      const splitText2 = new SplitText(text2Ref.current, { type: "lines" });
 
-    tl.to(moonRef.current, { scale: 2.5, duration: 1 }, 0)
-      .to(text1Ref.current, { x: -20, duration: 1 }, 0)
-      .to(text2Ref.current, { x: 20, duration: 1 }, 0);
+      // ===== TEXT + TITLE ANIMATION =====
+      const tltext = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 65%",
+          toggleActions: "play none none reverse",
+          markers: false,
+        },
+      });
 
-    return () => tl.scrollTrigger?.kill(); // cleanup on unmount
+      // 0️⃣ Tag animation first
+      tltext.fromTo(
+        tagRef.current,
+        { y: -20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }
+      );
+
+      // 1️⃣ Title lines
+      tltext.fromTo(
+        splitTitle.lines,
+        { y: 60, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, stagger: 0.25, ease: "power3.out" }
+      );
+
+      // 2️⃣ Play background and text
+      tltext
+        .fromTo(
+          playBgRef.current,
+          { width: "0%" },
+          { width: "100%", duration: 0.6, ease: "power2.inOut" },
+          "-=0.4"
+        )
+        .fromTo(
+          playRef.current,
+          { y: 30, opacity: 0, scale: 0.95 },
+          { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.3)" },
+          "<"
+        );
+
+      // 3️⃣ Text1 & Text2 together
+      tltext.fromTo(
+        [splitText1.lines, splitText2.lines],
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power2.out" },
+        "+=0.2"
+      );
+
+      // ===== MOON SCROLL ANIMATION =====
+      const tlMoon = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+          pin: true,
+        },
+      });
+
+      // Moon + text movement
+      tlMoon.to(moonRef.current, { scale: 2.5, duration: 1.2 })
+        .to(text1Ref.current, { x: -25, duration: 1.2 }, "<")
+        .to(text2Ref.current, { x: 25, duration: 1.2 }, "<");
+
+      return () => {
+        tltext.scrollTrigger?.kill();
+        tlMoon.scrollTrigger?.kill();
+        splitTitle.revert();
+        splitText1.revert();
+        splitText2.revert();
+      };
+    };
+
+    if (document.fonts) {
+      document.fonts.ready.then(initAnimations);
+    } else {
+      initAnimations();
+    }
   }, []);
 
   return (
@@ -46,7 +125,7 @@ const AboutSection = () => {
         alt="gradient"
       />
       <div id="about_top">
-        <div id="tag_about">
+        <div id="tag_about" ref={tagRef}>
           <Image
             width={1000}
             height={1000}
@@ -56,13 +135,14 @@ const AboutSection = () => {
           ABOUT US
         </div>
 
-        <div id="about_title">
-          <h2>
-            Where <br />
-            Skill Meets
-          </h2>
+        <div id="about_title" ref={titleRef}>
+          <h2>Where</h2>
+          <h2>Skill Meets</h2>
           <span id="play">
-            <span id="play_bg"></span>Play
+            <span id="play_bg" ref={playBgRef}></span>
+            <span id="playtext" ref={playRef}>
+              Play
+            </span>
           </span>
         </div>
       </div>
