@@ -21,6 +21,10 @@ body {
   height: 100%;
   background-color: #021d32;
 }
+main{
+  width: 100%;
+  overflow: hidden;
+}
 
 ::-webkit-scrollbar{
   width: 5px;

@@ -1,6 +1,6 @@
 #hero_section {
   width: 100%;
-  min-height: 200vh;
+  height: 230vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -25,8 +25,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  margin-bottom: -22rem;
   position: relative;
+  margin-bottom: -40vh;
 }
 #stars-hero-md {
   width: 110%;
@@ -36,8 +36,8 @@
 }
 #moon-hero {
   display: block;
-  width: 65%;
-  height: auto;
+  width: auto;
+  height: 140vh;
   position: relative;
 }
 #gradient {
@@ -51,7 +51,7 @@
 
 #hero_content {
   position: absolute;
-  top: 20%;
+  top: 45vh;
   z-index: 9;
   display: flex;
   flex-direction: column;
@@ -87,7 +87,8 @@
 }
 #mountain {
   width: 105%;
-  height: auto;
+  height: 50vh;
+  object-fit: cover;
   display: block;
   margin-bottom: -6.2rem;
   position: relative;
@@ -95,7 +96,9 @@
 }
 #land {
   width: 105%;
-  height: auto;
+  height: 80vh;
+  object-fit: cover;
+  object-position: bottom;
   display: block;
 }
 
@@ -113,7 +116,7 @@
 #about_section {
   width: 100%;
   height: 100vh;
-  padding:  3rem;
+  padding: 3rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -195,7 +198,9 @@
 }
 
 #about_bottom {
+  position: relative;
   width: 100%;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -217,43 +222,36 @@
   width: 28%;
 }
 #about-moon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   width: 32%;
   height: auto;
   display: block;
+  z-index: 99;
+  transform-origin: center;
 }
 /* why_section */
 #why_section {
   width: 100%;
   height: auto;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 65vh 0 30vh;
 }
 #why_star {
   width: 100%;
   height: auto;
   display: block;
   position: absolute;
-  top: 0;
+  top: 40%;
   left: 0;
-  z-index: 3;
-}
-#why_shadow {
-  width: 100%;
-  height: auto;
-  display: block;
+  z-index: -1;
 }
 
-#why_content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 16rem;
-}
+
 #why_title {
   position: relative;
   display: flex;
@@ -304,7 +302,30 @@
   padding: 3rem 8rem;
   margin-top: 2rem;
   position: relative;
+  z-index: 2;
 }
+#why_shadow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  display: block;
+  animation: rotate360 40s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
 .card_wrapper {
   width: 100%;
   height: 278px;
@@ -385,7 +406,7 @@
   right: -30%;
   animation: spin 20s linear infinite;
 }
-#card_spinner:hover{
+#card_spinner:hover {
   animation-play-state: paused;
 }
 
@@ -459,7 +480,6 @@
 .card_wrapper:nth-child(1) #card_tag_bg {
   background-color: #a4bd3b;
   border: 8px solid #c3f076;
-
 }
 .card_wrapper:nth-child(2) #card_tag {
   -webkit-text-stroke: 4px #ff582a;
@@ -478,7 +498,6 @@
 .card_wrapper:nth-child(3) #card_tag_bg {
   background-color: #00daea;
   border: 6px solid #34fff8;
-
 }
 
 /* showcase_section */
@@ -532,7 +551,7 @@
   top: -60%;
   left: 0;
 }
-#showcase_moon_container{
+#showcase_moon_container {
   width: 100%;
   display: flex;
   align-items: center;
@@ -546,7 +565,7 @@
   display: block;
   position: relative;
 }
-#showcase_slider{
+#showcase_slider {
   position: absolute;
   top: 0;
   left: 0;
@@ -557,12 +576,12 @@
   justify-content: center;
   gap: 0rem;
 }
-.showcase_card{
+.showcase_card {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.showcase_card .card_bg{
+.showcase_card .card_bg {
   width: 450px;
   height: auto;
   display: block;
@@ -654,27 +673,27 @@
   pointer-events: none;
 }
 
-#tv_slider{
+#tv_slider {
   width: 100%;
   margin-top: 6rem;
   overflow: hidden;
 }
-.tv_card{
+.tv_card {
   width: auto;
   height: 100%;
-  background-color: #1EAFD6;
+  background-color: #1eafd6;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5rem 9rem;
   border-radius: 30px;
-  border: 7px solid #76E2FF;
+  border: 7px solid #76e2ff;
   user-select: none;
   flex-shrink: 0;
   transform-origin: center;
 }
-.tv_card .shadow{
+.tv_card .shadow {
   width: 100%;
   height: 100%;
   display: block;
@@ -682,22 +701,22 @@
   top: 0;
   left: 0;
 }
-.tv_card .character{
+.tv_card .character {
   width: auto;
   height: 220px;
   display: block;
 }
-#play_game_btn{
+#play_game_btn {
   padding: 1rem 2rem;
-   font-family: Changes;
+  font-family: Changes;
   font-weight: 500;
   font-size: 1rem;
   text-transform: uppercase;
-  -webkit-text-stroke: 3px  #000;
+  -webkit-text-stroke: 3px #000;
   paint-order: stroke fill;
-  background-color: #8DC34B;
+  background-color: #8dc34b;
   color: white;
-  border: 4px solid #6BA900;
+  border: 4px solid #6ba900;
   border-radius: 12px;
   margin-top: 4rem;
 }
@@ -781,8 +800,8 @@
   z-index: -1;
 }
 
-#book_container{
-  width:fit-content;
+#book_container {
+  width: fit-content;
   height: auto;
   margin-top: 4rem;
   display: flex;
@@ -790,7 +809,7 @@
   justify-content: center;
   position: relative;
 }
-#book-page1{
+#book-page1 {
   height: 80%;
   width: 88%;
   position: absolute;
@@ -800,15 +819,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:0 2rem;
+  padding: 0 2rem;
 }
-.page_book{
+.page_book {
   width: 43%;
   height: 100%;
   position: relative;
 }
 
-#earth{
+#earth {
   height: 10.2rem;
   width: auto;
   position: absolute;
@@ -816,7 +835,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
-#book_card{
+#book_card {
   height: 16rem;
   width: auto;
   position: absolute;
@@ -824,7 +843,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
-#bookmoon{
+#bookmoon {
   height: 20rem;
   width: auto;
   position: absolute;
@@ -833,14 +852,13 @@
   transform: translateX(-50%);
 }
 
-
-.page_book .lines_book{
+.page_book .lines_book {
   width: 100%;
   height: 2rem;
   padding: 1.5rem;
   display: block;
   border-bottom: 0.1vw solid #686868;
-   font-family: AldotheApache;
+  font-family: AldotheApache;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1;
@@ -848,14 +866,14 @@
   white-space: nowrap;
 }
 
-#book_container #book{
+#book_container #book {
   width: auto;
   height: 105vh;
   object-fit: contain;
   transform: rotate(-7deg);
 }
 
-#astro1{
+#astro1 {
   height: 8rem;
   width: auto;
   display: block;
@@ -863,7 +881,7 @@
   top: -17%;
   right: -6%;
 }
-#astro2{
+#astro2 {
   height: 8rem;
   width: auto;
   display: block;
@@ -871,7 +889,7 @@
   bottom: -3%;
   left: -2%;
 }
-#astro3{
+#astro3 {
   height: 8rem;
   width: auto;
   display: block;
@@ -881,7 +899,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {

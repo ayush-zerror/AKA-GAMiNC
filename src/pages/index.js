@@ -16,9 +16,8 @@ const Home = () => {
   const skinRef = useRef(null)
 
   return (
-    <>
+    <main>
       <Navbar sections={{ home: homeRef, about: aboutRef, games: gamesRef, skin: skinRef }} />
-
       <div ref={homeRef}>
         <HeroSection />
       </div>
@@ -36,9 +35,8 @@ const Home = () => {
         <ConqureSection />
       </div>
       <StorySection />
-
       <Footer />
-    </>
+    </main>
   )
 }
 

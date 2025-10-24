@@ -26,53 +26,67 @@ const HeroSection = () => {
     });
 
     // Background stars: subtle slow parallax
-    tl.to(starsRef.current, {
-      y: -30,
-      x: 10,
-      rotation: 1,
-      ease: "power1.out",
-    }, 0);
+    tl.to(
+      starsRef.current,
+      {
+        y: -30,
+        x: 10,
+        rotation: 1,
+        ease: "power1.out",
+      },
+      0
+    );
 
     // Moon layer: move + rotate for 3D feel
-    tl.to(moonRef.current, {
-      y: -160,
-      x: 35,
-      z: 10,
-      scale: 1.06,
-      rotationY: 6,
-      rotationX: 2,
-      ease: "power1.out",
-    }, 0);
+    tl.to(
+      moonRef.current,
+      {
+        y: -160,
+        scale: 1.06,
+        rotationY: 6,
+        rotationX: 2,
+        ease: "power1.out",
+      },
+      0
+    );
 
     // Mountain layer
-    tl.to(mountainRef.current, {
-      y: -240,
-      x: 25,
-      z: 5,
-      rotationY: 4,
-      rotationX: 1,
-      ease: "power1.out",
-    }, 0);
+    tl.to(
+      mountainRef.current,
+      {
+        y: -240,
+        rotationY: 4,
+        rotationX: 1,
+        ease: "power1.out",
+      },
+      0
+    );
 
     // Land layer
-    tl.to(landRef.current, {
-      y: -160,
-      x: -15,
-      z: 3,
-      rotationY: -2,
-      rotationX: -1,
-      ease: "power1.out",
-    }, 0);
+    tl.to(
+      landRef.current,
+      {
+        y: -160,
+        rotationY: -2,
+        rotationX: -1,
+        ease: "power1.out",
+      },
+      0
+    );
 
     // Stage layer
-    tl.to(stageRef.current, {
-      y: -90,
-      x: -25,
-      z: 0,
-      rotationY: -5,
-      rotationX: -2,
-      ease: "power1.out",
-    }, 0);
+    tl.to(
+      stageRef.current,
+      {
+        y: -90,
+        x: -25,
+        z: 0,
+        rotationY: -5,
+        rotationX: -2,
+        ease: "power1.out",
+      },
+      0
+    );
   }, []);
 
   return (
@@ -118,31 +132,30 @@ const HeroSection = () => {
           alt="moon"
           priority
         />
-      
       </div>
-  <div id="hero_content">
-          <h2>
-            Step into <br /> the <br /> world of <br /> Gaming
-          </h2>
-          <div id="store_btn_container">
-            <Link href="/">
-              <Image
-                width={150}
-                height={50}
-                src="/images/googleplay.svg"
-                alt="googleplay"
-              />
-            </Link>
-            <Link href="/">
-              <Image
-                width={150}
-                height={50}
-                src="/images/appstore.svg"
-                alt="appstore"
-              />
-            </Link>
-          </div>
+      <div id="hero_content">
+        <h2>
+          Step into <br /> the <br /> world of <br /> Gaming
+        </h2>
+        <div id="store_btn_container">
+          <Link href="/">
+            <Image
+              width={150}
+              height={50}
+              src="/images/googleplay.svg"
+              alt="googleplay"
+            />
+          </Link>
+          <Link href="/">
+            <Image
+              width={150}
+              height={50}
+              src="/images/appstore.svg"
+              alt="appstore"
+            />
+          </Link>
         </div>
+      </div>
       <div id="ground_container" style={{ willChange: "transform" }}>
         <Image
           id="mountain"
