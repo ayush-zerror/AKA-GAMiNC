@@ -24,35 +24,63 @@ const Home = () => {
 
   useEffect(() => {
     if (astronautRef.current && aboutRef.current) {
-      gsap.to(astronautRef.current, {
+      const astro1 = astronautRef.current.querySelector("#astro1");
+      const astro2 = astronautRef.current.querySelector("#astro2");
+
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: aboutRef.current,
-          start: "top bottom", // when top of AboutSection hits center of viewport
+          start: "top bottom",
           end: "bottom center",
-          scrub: true, // smooth animation
-
-        },
-        top: "27%", // new position
-        left: "45%", // center horizontally
-        scale:1.2,
-        onComplete: () => {
-          // Change the image src right when animation starts
-          astronautRef.current.src = "/images/astronaut2.png";
+          scrub: true,
         }
-      })
+      });
+
+      // 1️⃣ Move container and scale
+      tl.to(astronautRef.current, {
+        top: "27%",
+        left: "45%",
+        scale: 1.2,
+        ease: "none",
+      });
+
+      // 2️⃣ Fade images after container animation
+      // Add "+=0.3" for delay, or change the number as needed
+      tl.to(astro1, { opacity: 0, ease: "none" }, "+=0.3");
+      tl.to(astro2, { opacity: 1, ease: "none" }, "<"); // "<" means start at the same time as previous
     }
-  }, [])
+  }, []);
 
   return (
     <main>
       <Navbar sections={{ home: homeRef, about: aboutRef, games: gamesRef, skin: skinRef }} />
 
-      <img
+      <div
+        id="astronaut-container"
+        style={{
+          position: "absolute",
+          top: "9%",
+          left: "12%",
+          height: "13rem",
+          width: "16rem",
+          zIndex: 9,
+        }}
         ref={astronautRef}
-        id='astronaut'
-        src="/images/astronaut.png"
-        alt='astronaut'
-      />
+      >
+        <img
+          src="/images/astronaut.png"
+          alt="astronaut1"
+          id="astro1"
+          style={{ position: "absolute", top: 0, objectFit: "contain", left: 0, width: "100%", height: "100%", opacity: 1 }}
+        />
+        <img
+          src="/images/astronaut2.png"
+          alt="astronaut2"
+          id="astro2"
+          style={{ position: "absolute", top: 0, objectFit: "contain", left: 0, width: "100%", height: "100%", opacity: 0 }}
+        />
+      </div>
+
 
       <div ref={homeRef}>
         <HeroSection />
