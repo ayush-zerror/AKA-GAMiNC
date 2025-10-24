@@ -76,12 +76,19 @@ const AboutSection = () => {
         );
 
       // 3️⃣ Text1 & Text2 together
-      tltext.fromTo(
-        [splitText1.lines, splitText2.lines],
-        { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power2.out" },
-        "+=0.2"
-      );
+      tltext
+        .fromTo(
+          splitText1.lines,
+          { y: 40, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power2.out" },
+          "+=0.2"
+        )
+        .fromTo(
+          splitText2.lines,
+          { y: 40, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power2.out" },
+          "<"
+        );
 
       // ===== MOON SCROLL ANIMATION =====
       const tlMoon = gsap.timeline({
@@ -95,7 +102,8 @@ const AboutSection = () => {
       });
 
       // Moon + text movement
-      tlMoon.to(moonRef.current, { scale: 2.5, duration: 1.2 })
+      tlMoon
+        .to(moonRef.current, { scale: 2.5, duration: 1.2 })
         .to(text1Ref.current, { x: -25, duration: 1.2 }, "<")
         .to(text2Ref.current, { x: 25, duration: 1.2 }, "<");
 
