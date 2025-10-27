@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import CurvedCylinder from "../cylinderSlider/CurvedCylinder";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -78,7 +79,7 @@ const ShowcaseSection = () => {
       </span>
 
       {/* ===== MOON + SLIDER ===== */}
-      <div id="showcase_moon_container">
+      {/* <div id="showcase_moon_container">
         <Image
           id="showcase_moon"
           width={1000}
@@ -115,7 +116,8 @@ const ShowcaseSection = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
+      <CurvedCylinder/>
     </div>
   );
 };
