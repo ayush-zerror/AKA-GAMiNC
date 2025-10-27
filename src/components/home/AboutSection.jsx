@@ -15,6 +15,7 @@ const AboutSection = () => {
   const titleRef = useRef(null);
   const playRef = useRef(null);
   const playBgRef = useRef(null);
+  const astroRef = useRef(null);
   const tagRef = useRef(null); // tag reference
 
   useGSAP(() => {
@@ -27,7 +28,8 @@ const AboutSection = () => {
         !titleRef.current ||
         !playRef.current ||
         !playBgRef.current ||
-        !tagRef.current
+        !tagRef.current ||
+        !astroRef.current
       )
         return;
 
@@ -73,22 +75,28 @@ const AboutSection = () => {
           { y: 30, opacity: 0, scale: 0.95 },
           { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.3)" },
           "<"
-        );
+        )
+         .fromTo(
+          astroRef.current,
+          { y: 40, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
+        )
 
       // 3️⃣ Text1 & Text2 together
       tltext
         .fromTo(
           splitText1.lines,
           { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power2.out" },
+          { y: 0, opacity: 1, duration: 0.8, stagger: {amount:.6}, ease: "power2.out" },
           "+=0.2"
         )
         .fromTo(
           splitText2.lines,
           { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power2.out" },
+          { y: 0, opacity: 1, duration: 0.8, stagger: {amount:.6}, ease: "power2.out" },
           "<"
-        );
+        )
+       
 
       // ===== MOON SCROLL ANIMATION =====
       const tlMoon = gsap.timeline({
@@ -140,6 +148,7 @@ const AboutSection = () => {
           <h2>Where</h2>
           <h2>Skill Meets</h2>
           <span id="play">
+               <Image ref={astroRef} id="about_astronaut" width={700} height={250} src="/images/astronaut.png" alt="astronaut" />
             <span id="play_bg" ref={playBgRef}></span>
             <span id="playtext" ref={playRef}>
               Play
