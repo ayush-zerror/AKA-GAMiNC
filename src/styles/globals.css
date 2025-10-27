@@ -17,7 +17,12 @@ html,
 body {
   width: 100%;
   height: 100%;
- 
+  background: radial-gradient(
+    circle at center,
+    #06407c 0%,
+    #032a4d 0%,
+    #000910 80%
+  );
 }
 #start_container {
   width: 100%;
@@ -46,7 +51,7 @@ main {
   top: 0;
   left: 0;
   overflow: hidden !important;
-   background: radial-gradient(
+  background: radial-gradient(
     circle at center,
     #06407c 0%,
     #032a4d 0%,
@@ -54,7 +59,8 @@ main {
   );
 }
 
-img, video {
-    max-width: none !important;
-    height: auto;
+img,
+video {
+  max-width: none !important;
+  height: auto;
 }

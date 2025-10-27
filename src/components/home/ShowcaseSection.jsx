@@ -50,7 +50,7 @@ const ShowcaseSection = () => {
         )
         // Animate Showcase text fade-up
         .fromTo(
-          textRef.current.querySelector("span:last-child"),
+          textRef.current,
           { y: 30, opacity: 0, scale: 0.95 },
           { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.3)" },
           "<"
@@ -72,9 +72,9 @@ const ShowcaseSection = () => {
       {/* ===== TITLE SECTION ===== */}
       <h2 ref={titleRef}>Mini Games</h2>
 
-      <span id="showcase_text" ref={textRef}>
+      <span id="showcase_text" >
         <span id="showcase_bg" ref={textBgRef}></span>
-        <span>Showcase</span>
+        <span ref={textRef}>Showcase</span>
       </span>
 
       {/* ===== MOON + SLIDER ===== */}
