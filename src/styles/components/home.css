@@ -341,6 +341,7 @@
   display: block;
   animation: rotate360 40s linear infinite;
   z-index: -1;
+  opacity: .2;
 }
 
 @keyframes rotate360 {

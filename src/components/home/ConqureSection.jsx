@@ -72,7 +72,7 @@ const ConqureSection = () => {
         )
         // Animate Customize text fade-up
         .fromTo(
-          customRef.current.querySelector("span:last-child"),
+          customRef.current,
           { y: 30, opacity: 0, scale: 0.95 },
           { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.3)" },
           "<"
@@ -97,9 +97,9 @@ const ConqureSection = () => {
           <h2 ref={h2Ref}>Conquer.</h2>
           <h3 ref={h3Ref}>Collect.</h3>
 
-          <span id="custom" ref={customRef}>
+          <span id="custom" >
             <span id="custom_bg" ref={customBgRef}></span>
-            <span>Customize.</span>
+            <span ref={customRef}>Customize.</span>
           </span>
 
           <TvSlider />
