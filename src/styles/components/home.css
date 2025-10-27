@@ -547,7 +547,7 @@
   line-height: 0.8;
   z-index: 2;
 }
-#showcase_section h3 {
+#showcase_section #showcase_text {
   font-family: Changes;
   font-weight: 500;
   font-size: 4.5rem;
@@ -560,7 +560,7 @@
   transform: rotate(3deg) translateX(-2%);
   transform-origin: top left;
 }
-#showcase_section h3 span {
+#showcase_section #showcase_text #showcase_bg {
   background-color: #ff2d17;
   position: absolute;
   top: 0;
