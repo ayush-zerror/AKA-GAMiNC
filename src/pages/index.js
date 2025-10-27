@@ -1,5 +1,6 @@
 import Footer from '@/components/common/Footer'
 import Navbar from '@/components/common/Navbar'
+import Galaxy from '@/components/Galaxy'
 import AboutSection from '@/components/home/AboutSection'
 import ConqureSection from '@/components/home/ConqureSection'
 import Hero from '@/components/home/Moon/Hero'
@@ -18,7 +19,15 @@ const Home = () => {
 
   return (
     <>
-      <StarContainer />
+      <Galaxy
+        mouseRepulsion
+        mouseInteraction
+        density={1}
+        glowIntensity={0.05}
+        saturation={0.1}
+        hueShift={240}
+      />
+      {/* <StarContainer /> */}
       <main>
         <Navbar sections={{ home: homeRef, about: aboutRef, games: gamesRef, skin: skinRef }} />
         <div ref={homeRef}>

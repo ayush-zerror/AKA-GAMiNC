@@ -617,6 +617,7 @@
   height: 100%;
   display: block;
   object-fit: contain;
+  display: none;
 }
 #tv_content {
   position: absolute;
