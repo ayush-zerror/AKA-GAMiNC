@@ -19,7 +19,7 @@ const Footer = () => {
             <Image
               width={1000}
               height={1000}
-              src="/images/googleplay.svg"
+              src="/images/googleplay.webp"
               alt="googleplay"
             />
           </Link>
@@ -27,7 +27,7 @@ const Footer = () => {
             <Image
               width={1000}
               height={1000}
-              src="/images/appstore.svg"
+              src="/images/appstore.webp"
               alt="googleplay"
             />
           </Link>

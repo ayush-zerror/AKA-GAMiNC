@@ -25,10 +25,7 @@ const TextHero = () => {
   }, []);
 
   return (
-    <div
-      id="hero_content"
-      ref={heroRef}
-    >
+    <div id="hero_content" ref={heroRef}>
       <h2>
         Step into <br /> the <br /> world of <br /> Gaming
       </h2>
@@ -38,7 +35,7 @@ const TextHero = () => {
           <Image
             width={150}
             height={50}
-            src="/images/googleplay.svg"
+            src="/images/googleplay.webp"
             alt="googleplay"
           />
         </Link>
@@ -46,7 +43,7 @@ const TextHero = () => {
           <Image
             width={150}
             height={50}
-            src="/images/appstore.svg"
+            src="/images/appstore.webp"
             alt="appstore"
           />
         </Link>

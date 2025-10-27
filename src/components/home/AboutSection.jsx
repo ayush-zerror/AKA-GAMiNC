@@ -138,7 +138,7 @@ const AboutSection = () => {
           <Image
             width={1000}
             height={1000}
-            src="/images/about-star.svg"
+            src="/images/about-star.webp"
             alt="star"
           />
           ABOUT US
@@ -167,7 +167,7 @@ const AboutSection = () => {
           id="about-moon"
           width={1000}
           height={1000}
-          src="/images/about-moon.svg"
+          src="/images/about-moon.webp"
           alt="blue-moon"
         />
         <p ref={text2Ref}>
