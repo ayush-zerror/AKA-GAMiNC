@@ -410,11 +410,12 @@
 .card_wrapper:nth-child(2) {
   display: flex;
   justify-content: flex-end;
+  transform: translateY(4%);
 }
 .card_wrapper:nth-child(2) .why_card {
   background-color: #ffc32a;
   border: 6px solid #ffcc89;
-  transform: rotate(4deg) translateY(15%);
+  transform: rotate(4deg) translateY(0%);
   -webkit-text-stroke: 3px #ff9292;
   paint-order: stroke fill;
 }
@@ -613,7 +614,6 @@
   width: 100%;
   position: relative;
   z-index: 3;
-  pointer-events: all;
 }
 
 #tv_container {
@@ -700,6 +700,7 @@
   width: 100%;
   margin-top: 6rem;
   overflow: hidden;
+  pointer-events: all;
 }
 .tv_card {
   width: auto;
@@ -742,6 +743,9 @@
   border: 4px solid #6ba900;
   border-radius: 12px;
   margin-top: 4rem;
+  pointer-events: all;
+
+
 }
 /* story_section */
 #story_section {
