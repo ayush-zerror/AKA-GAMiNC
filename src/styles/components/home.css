@@ -755,6 +755,7 @@
   display: block;
   margin: 0 auto;
   margin-bottom: -20rem;
+  opacity: .2;
 }
 #story-star-lg {
   width: 100%;

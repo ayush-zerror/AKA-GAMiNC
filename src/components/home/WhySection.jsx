@@ -138,7 +138,7 @@ const WhySection = () => {
         const cardTl = gsap.timeline({
           scrollTrigger: {
             trigger: card,
-            start: "top 75%",
+            start: "top 85%",
             toggleActions: "play none none reverse",
           },
         });
