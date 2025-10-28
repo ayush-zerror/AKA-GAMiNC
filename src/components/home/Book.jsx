@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
@@ -54,7 +52,6 @@ const Book = () => {
         scrollTrigger: {
           trigger: bookRef.current,
           start: "top 70%",
-          toggleActions: "play none none reverse",
         },
       });
 

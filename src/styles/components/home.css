@@ -58,6 +58,11 @@ nav #store_btn_container{
 }
 #store_btn_container a{
   pointer-events: all;
+  transition: scale ease .2s;
+  display: inline-block;
+}
+#store_btn_container a:hover{
+  scale: 1.01;
 }
 #ground_container {
   width: 100%;
