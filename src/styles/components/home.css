@@ -839,6 +839,7 @@ nav #store_btn_container{
   justify-content: space-between;
   padding: 5rem 6rem 5rem 4rem;
   transform: rotate(-7deg);
+  margin-top: 4rem;
 }
 .book_page {
   width: 43%;
