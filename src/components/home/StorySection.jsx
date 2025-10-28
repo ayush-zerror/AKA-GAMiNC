@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SplitText from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Book from "./Book";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -95,111 +96,13 @@ const StorySection = () => {
       <div id="story_overlay" ref={titleRef}>
         <h2>The Story</h2>
         <h3>Behind</h3>
-        <span id="hyst" >
+        <span id="hyst">
           <span id="hyst-bg" ref={hystBgRef}></span>
           <span ref={hystRef}>Hyst</span>
         </span>
 
         {/* === Your book section === */}
-        <div id="book_container">
-          <Image
-            id="book"
-            width={1000}
-            height={1000}
-            src="/images/book.webp"
-            alt="book"
-          />
-          <div id="book-page1">
-            <div className="page_book">
-              <span className="lines_book"></span>
-              <span className="lines_book">
-                Three friends united by their love for gaming and
-              </span>
-              <span className="lines_book">innovation.</span>
-              <span className="lines_book"></span>
-              <span className="lines_book"></span>
-              <span className="lines_book"></span>
-              <span className="lines_book"></span>
-              <span className="lines_book"></span>
-              <span className="lines_book"></span>
-              <span className="lines_book">
-                What began as late-night ideas and endless
-              </span>
-              <span className="lines_book">
-                that went beyond fun and competition.{" "}
-              </span>
-              <span className="lines_book">
-                {" "}
-                play sessions soon evolved into a vision{" "}
-              </span>
-              <Image
-                id="bookmoon"
-                width={1000}
-                height={1000}
-                src="/images/showcase-moon.webp"
-                alt="moon"
-              />
-            </div>
-            <div className="page_book">
-              <span className="lines_book">
-                They asked, “What if gaming could do more than{" "}
-              </span>
-              <span className="lines_book">
-                entertain?” That question sparked HYST — a platform
-              </span>
-              <span className="lines_book">
-                where every tap, jump, and challenge helps players{" "}
-              </span>
-              <span className="lines_book"></span>
-              <span className="lines_book"></span>
-              <span className="lines_book"></span>
-              <span className="lines_book">
-                sharpen skills, build focus, and feel rewarded as they
-              </span>
-              <span className="lines_book">grow.</span>
-              <span className="lines_book"></span>
-              <span className="lines_book"></span>
-              <span className="lines_book"></span>
-              <span className="lines_book"></span>
-              <Image
-                id="earth"
-                width={1000}
-                height={1000}
-                src="/images/earth.webp"
-                alt="earth"
-              />
-              <Image
-                id="book_card"
-                width={1000}
-                height={1000}
-                src="/images/book-card.webp"
-                alt="cards"
-              />
-            </div>
-
-            <Image
-              id="astro1"
-              width={1000}
-              height={1000}
-              src="/images/astro1.webp"
-              alt="astro"
-            />
-            <Image
-              id="astro2"
-              width={1000}
-              height={1000}
-              src="/images/astro2.webp"
-              alt="astro"
-            />
-            <Image
-              id="astro3"
-              width={1000}
-              height={1000}
-              src="/images/astro3.webp"
-              alt="astro"
-            />
-          </div>
-        </div>
+        <Book />
       </div>
     </div>
   );

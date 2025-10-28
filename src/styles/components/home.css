@@ -828,36 +828,53 @@
   z-index: -1;
 }
 
-#book_container {
-  width: 78%;
-  height: auto;
-  margin-top: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+/* book container  */
+
+#book-wrapper {
   position: relative;
-}
-#book-page1 {
-  height: 80%;
-  width: 88%;
-  position: absolute;
-  top: 1%;
-  left: 48.2%;
-  transform: rotate(-7deg) translateX(-50%);
+  width: 75vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 5rem 6rem 5rem 4rem;
+  transform: rotate(-7deg);
 }
-.page_book {
+.book_page {
   width: 43%;
   height: 100%;
   position: relative;
 }
 
+
+.book_page .lines_book {
+  width: 100%;
+  height: 3vw;
+  padding:1.5vw;
+  display: block;
+  border-bottom: 0.1vw solid #686868a7;
+  font-family: AldotheApache;
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 1;
+  color: #082954;
+  white-space: nowrap;
+}
+
+#book-wrapper #book {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+}
+
+
 #earth {
-  height: calc((100% / 12)*3);
-  width: calc(100% - 3rem);
+  height: calc(3vw*3);
+  width: calc(100% - 3vw);
   position: absolute;
   top:calc((100% / 12)*3);
   left: 50%;
@@ -865,7 +882,7 @@
   object-fit: cover;
 }
 #book_card {
-  height: calc((100% / 12)*4.5);
+  height: calc(3vw * 4.5);
   width: auto;
   position: absolute;
   bottom: 0;
@@ -874,45 +891,23 @@
   transform: translateX(-50%);
 }
 #bookmoon {
-  height: calc((100% / 12)*6.5);
+  height: calc(3vw * 6.5);
   width: auto;
   position: absolute;
-  top: calc((100% / 12)*2.5);
+  top: calc(3vw*2.5);
   left: 50%;
   transform: translateX(-50%);
 }
-
-.page_book .lines_book {
-  width: 100%;
-  height: calc(100% / 12);
-  padding: 1.5rem;
-  display: block;
-  border-bottom: 0.1vw solid #686868;
-  font-family: AldotheApache;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1;
-  color: #082954;
-  white-space: nowrap;
-}
-
-#book_container #book {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  transform: rotate(-7deg);
-}
-
 #astro1 {
-  height: 8rem;
+  height: 10vw;
   width: auto;
   display: block;
   position: absolute;
-  top: -17%;
-  right: -6%;
+  top: 0%;
+  right: 0%;
 }
 #astro2 {
-  height: 8rem;
+  height: 10vw;
   width: auto;
   display: block;
   position: absolute;
@@ -920,12 +915,12 @@
   left: -2%;
 }
 #astro3 {
-  height: 8rem;
+  height: 8vw;
   width: auto;
   display: block;
   position: absolute;
-  bottom: -13%;
-  right: -7%;
+  bottom: 0%;
+  right: 0%;
 }
 
 @keyframes float {
@@ -934,7 +929,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-5px); /* move up slightly */
+    transform: translateY(-10px); /* move up slightly */
   }
 }
 
