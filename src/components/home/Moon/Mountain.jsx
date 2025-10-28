@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Mountain = () => {
+const Mountain = ({astroRef}) => {
   const mountainRef = useRef(null);
   const landRef = useRef(null);
   const stageRef = useRef(null);
@@ -71,7 +71,7 @@ const Mountain = () => {
       />
       <div ref={stageRef} id="stage">
         <Image id="stage_platform" width={700} height={250} src="/images/stage.webp" alt="stage" />
-        <Image id="astronaut" width={700} height={250} src="/images/astronaut.webp" alt="astronaut" />
+        <Image ref={astroRef} id="astronaut" width={700} height={250} src="/images/astronaut.webp" alt="astronaut" />
       </div>
     </div>
   );

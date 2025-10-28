@@ -7,7 +7,7 @@ import React, { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-const AboutSection = () => {
+const AboutSection = ({ newSection }) => {
   const sectionRef = useRef(null);
   const moonRef = useRef(null);
   const text1Ref = useRef(null);
@@ -76,27 +76,38 @@ const AboutSection = () => {
           { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.3)" },
           "<"
         )
-         .fromTo(
+        .fromTo(
           astroRef.current,
           { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
-        )
+          { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }
+        );
 
       // 3️⃣ Text1 & Text2 together
       tltext
         .fromTo(
           splitText1.lines,
           { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, stagger: {amount:.6}, ease: "power2.out" },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            stagger: { amount: 0.6 },
+            ease: "power2.out",
+          },
           "+=0.2"
         )
         .fromTo(
           splitText2.lines,
           { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, stagger: {amount:.6}, ease: "power2.out" },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            stagger: { amount: 0.6 },
+            ease: "power2.out",
+          },
           "<"
-        )
-       
+        );
 
       // ===== MOON SCROLL ANIMATION =====
       const tlMoon = gsap.timeline({
@@ -148,7 +159,14 @@ const AboutSection = () => {
           <h2>Where</h2>
           <h2>Skill Meets</h2>
           <span id="play">
-               <Image ref={astroRef} id="about_astronaut" width={700} height={250} src="/images/astronaut.webp" alt="astronaut" />
+            <Image
+              ref={astroRef}
+              id="about_astronaut"
+              width={700}
+              height={250}
+              src="/images/astronaut.webp"
+              alt="astronaut"
+            />
             <span id="play_bg" ref={playBgRef}></span>
             <span id="playtext" ref={playRef}>
               Play
@@ -157,7 +175,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div id="about_bottom">
+      <div id="about_bottom" ref={newSection}>
         <h5 ref={text1Ref}>
           HYST isn’t just another mobile game. It’s a world of fast, challenging
           2D games built to sharpen your mind and reflexes.
