@@ -40,7 +40,7 @@ const Footer = () => {
               <Image
                 width={1000}
                 height={1000}
-                src="/images/insta.svg"
+                src="/images/insta.webp"
                 alt="instagram"
               />
             </Link>
@@ -48,7 +48,7 @@ const Footer = () => {
               <Image
                 width={1000}
                 height={1000}
-                src="/images/linkedin.svg"
+                src="/images/linkedin.webp"
                 alt="linkedin"
               />
             </Link>

@@ -148,7 +148,7 @@ const AboutSection = () => {
           <h2>Where</h2>
           <h2>Skill Meets</h2>
           <span id="play">
-               <Image ref={astroRef} id="about_astronaut" width={700} height={250} src="/images/astronaut.png" alt="astronaut" />
+               <Image ref={astroRef} id="about_astronaut" width={700} height={250} src="/images/astronaut.webp" alt="astronaut" />
             <span id="play_bg" ref={playBgRef}></span>
             <span id="playtext" ref={playRef}>
               Play

@@ -33,7 +33,7 @@ const StorySection = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 40%",
+          start: "top 70%",
           toggleActions: "play none none reverse",
         },
       });
@@ -165,14 +165,14 @@ const StorySection = () => {
                 id="earth"
                 width={1000}
                 height={1000}
-                src="/images/earth.png"
+                src="/images/earth.webp"
                 alt="earth"
               />
               <Image
                 id="book_card"
                 width={1000}
                 height={1000}
-                src="/images/book-card.svg"
+                src="/images/book-card.webp"
                 alt="cards"
               />
             </div>
@@ -181,21 +181,21 @@ const StorySection = () => {
               id="astro1"
               width={1000}
               height={1000}
-              src="/images/astro1.png"
+              src="/images/astro1.webp"
               alt="astro"
             />
             <Image
               id="astro2"
               width={1000}
               height={1000}
-              src="/images/astro2.png"
+              src="/images/astro2.webp"
               alt="astro"
             />
             <Image
               id="astro3"
               width={1000}
               height={1000}
-              src="/images/astro3.png"
+              src="/images/astro3.webp"
               alt="astro"
             />
           </div>

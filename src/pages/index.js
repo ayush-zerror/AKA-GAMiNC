@@ -5,7 +5,6 @@ import AboutSection from '@/components/home/AboutSection'
 import ConqureSection from '@/components/home/ConqureSection'
 import Hero from '@/components/home/Moon/Hero'
 import ShowcaseSection from '@/components/home/ShowcaseSection'
-import StarContainer from '@/components/home/Stars/StarContainer'
 import StorySection from '@/components/home/StorySection'
 import WhySection from '@/components/home/WhySection'
 import React, { useRef } from 'react'
@@ -27,7 +26,6 @@ const Home = () => {
         saturation={0.1}
         hueShift={240}
       />
-      {/* <StarContainer /> */}
       <main>
         <Navbar sections={{ home: homeRef, about: aboutRef, games: gamesRef, skin: skinRef }} />
         <div ref={homeRef}>

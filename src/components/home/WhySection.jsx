@@ -188,7 +188,7 @@ const WhySection = () => {
           ref={astroRef}
           width={1000}
           height={1000}
-          src="/images/why-astro.png"
+          src="/images/why-astro.webp"
           alt="astronaut"
         />
       </div>
