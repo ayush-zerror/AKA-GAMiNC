@@ -29,25 +29,6 @@ const TextHero = () => {
       <h2>
         Step into <br /> the <br /> world of <br /> Gaming
       </h2>
-
-      <div id="store_btn_container">
-        <Link href="/">
-          <Image
-            width={150}
-            height={50}
-            src="/images/googleplay.webp"
-            alt="googleplay"
-          />
-        </Link>
-        <Link href="/">
-          <Image
-            width={150}
-            height={50}
-            src="/images/appstore.webp"
-            alt="appstore"
-          />
-        </Link>
-      </div>
     </div>
   );
 };

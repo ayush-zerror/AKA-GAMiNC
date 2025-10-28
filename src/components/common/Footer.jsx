@@ -15,22 +15,25 @@ const Footer = () => {
       <div id="footer_overlay">
         <h2>Get in touch</h2>
         <div id="store_btn_container">
-          <Link href="/">
+          <a target="_black" href="https://play.google.com/store/games">
             <Image
-              width={1000}
-              height={1000}
-              src="/images/googleplay.webp"
+              width={150}
+              height={50}
+              src="/images/play-btn.svg"
               alt="googleplay"
             />
-          </Link>
-          <Link href="/">
+          </a>
+          <a
+            target="_black"
+            href="https://apps.apple.com/in/app/apple-store/id375380948"
+          >
             <Image
-              width={1000}
-              height={1000}
-              src="/images/appstore.webp"
-              alt="googleplay"
+              width={150}
+              height={50}
+              src="/images/app-btn.svg"
+              alt="appstore"
             />
-          </Link>
+          </a>
         </div>
         <div id="footer_bottom">
           <h4>Designed with love for players</h4>
