@@ -120,11 +120,33 @@ const AboutSection = ({ newSection }) => {
         },
       });
 
+      // calculate center difference
+      const sectionBox = sectionRef.current.getBoundingClientRect();
+      const moonBox = moonRef.current.getBoundingClientRect();
+
+      const sectionCenter = {
+        x: sectionBox.left + sectionBox.width / 2,
+        y: sectionBox.top + sectionBox.height / 2,
+      };
+      const moonCenter = {
+        x: moonBox.left + moonBox.width / 2,
+        y: moonBox.top + moonBox.height / 2,
+      };
+
+      const xOffset = sectionCenter.x - moonCenter.x;
+      const yOffset = sectionCenter.y - moonCenter.y;
+
       // Moon + text movement
       tlMoon
-        .to(moonRef.current, { scale: 2.5, duration: 1.2 })
-        .to(text1Ref.current, { x: -25, duration: 1.2 }, "<")
-        .to(text2Ref.current, { x: 25, duration: 1.2 }, "<");
+        .to(moonRef.current, {
+          scale: 3,
+          x: xOffset,
+          y: yOffset,
+          duration: 1.5,
+          ease: "power2.inOut",
+        })
+        .to(text1Ref.current, { x: -50, duration: 1.2 }, "<")
+        .to(text2Ref.current, { x: 50, duration: 1.2 }, "<");
 
       return () => {
         tltext.scrollTrigger?.kill();
