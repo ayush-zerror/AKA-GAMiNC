@@ -18,6 +18,7 @@
 #moon_container img{
   width: 60%;
   height: auto;
+  margin-left: 70px;
 }
 #hero_content {
   position: absolute;
