@@ -105,14 +105,6 @@ const ConqureSection = () => {
           <TvSlider />
           <button id="play_game_btn">Play Games</button>
         </div>
-
-        <Image
-          id="tv"
-          width={1000}
-          height={1000}
-          src="/images/tv-box.webp"
-          alt="tv"
-        />
       </div>
 
       <Image

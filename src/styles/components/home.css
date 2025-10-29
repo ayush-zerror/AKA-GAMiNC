@@ -666,13 +666,7 @@ nav #store_btn_container{
   height: 100%;
   padding: 3rem;
 }
-#tv {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: contain;
-  display: none;
-}
+
 #tv_content {
   position: absolute;
   top: 0;
