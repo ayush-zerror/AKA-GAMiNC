@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({btnRef}) => {
   return (
     <nav>
       <Link href="/" id="nav_logo">
@@ -14,7 +14,7 @@ const Navbar = () => {
         />
       </Link>
 
-      <div id="store_btn_container">
+      <div id="store_btn_container" ref={btnRef}>
         <a target="_black" href="https://play.google.com/store/games">
           <Image
             width={150}

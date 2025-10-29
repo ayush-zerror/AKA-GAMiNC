@@ -39,15 +39,13 @@ footer {
   color: #fff;
   paint-order: stroke fill;
 }
-#footer_overlay #store_btn_container {
-  margin-top: 0;
-}
+
 #footer_bottom {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 6rem;
+  margin-top:10rem;
   padding: 0 3rem 3rem;
   position: relative;
 }

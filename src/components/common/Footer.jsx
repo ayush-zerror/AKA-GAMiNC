@@ -2,50 +2,87 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const Footer = () => {
+gsap.registerPlugin(ScrollTrigger);
+
+const Footer = ({ btnRef }) => {
   const footerRef = useRef(null);
   const footerMoonRef = useRef(null);
 
   useEffect(() => {
     const footer = footerRef.current;
     const moon = footerMoonRef.current;
-    if (!footer || !moon) return;
+    const btn = btnRef?.current;
 
-    const handleMove = (e) => {
-      const rect = footer.getBoundingClientRect();
+    if (!footer || !moon || !btn) return;
 
-      // only animate if mouse is vertically within footer area
-      if (e.clientY >= rect.top && e.clientY <= rect.bottom) {
-        const x = (e.clientX - (rect.left + rect.width / 2)) * 0.015;
-        const y = (e.clientY - (rect.top + rect.height / 2)) * 0.015;
+    const initAnimations = () => {
+      // 🌕 mouse move
+      const handleMove = (e) => {
+        const rect = footer.getBoundingClientRect();
 
+        if (e.clientY >= rect.top && e.clientY <= rect.bottom) {
+          const x = (e.clientX - (rect.left + rect.width / 2)) * 0.015;
+          const y = (e.clientY - (rect.top + rect.height / 2)) * 0.015;
+
+          gsap.to(moon, {
+            x,
+            y,
+            duration: 1.2,
+            ease: "power3.out",
+          });
+        }
+      };
+
+      const handleLeave = () => {
         gsap.to(moon, {
-          x,
-          y,
-          duration: 1.2,
-          ease: "power3.out",
+          x: 0,
+          y: 0,
+          duration: 1.5,
+          ease: "power2.out",
         });
-      }
-    };
+      };
 
-    const handleLeave = () => {
-      gsap.to(moon, {
-        x: 0,
-        y: 0,
-        duration: 1.5,
-        ease: "power2.out",
+      window.addEventListener("mousemove", handleMove);
+      window.addEventListener("mouseleave", handleLeave);
+
+      // 🚀 Move button when footer visible
+      gsap.to(btn, {
+        scrollTrigger: {
+          trigger: footer,
+          start: "top 40%",
+          end: "bottom bottom",
+          scrub: 1,
+          // markers: true,
+        },
+        left: "50%",
+        top: "70%",
+        xPercent: -50,
+        scale: 1.5,
+        duration: 1,
+        ease: "linear",
       });
     };
 
-    window.addEventListener("mousemove", handleMove);
-    window.addEventListener("mouseleave", handleLeave);
+    // 🕓 Wait for fonts & images
+    Promise.all([
+      document.fonts.ready,
+      new Promise((resolve) => {
+        if (document.readyState === "complete") resolve();
+        else window.addEventListener("load", resolve, { once: true });
+      }),
+    ]).then(() => {
+      // run gsap only after everything is loaded
+      initAnimations();
+    });
 
     return () => {
-      window.removeEventListener("mousemove", handleMove);
-      window.removeEventListener("mouseleave", handleLeave);
+      window.removeEventListener("mousemove", initAnimations);
+      window.removeEventListener("mouseleave", initAnimations);
+      ScrollTrigger.killAll();
     };
-  }, []);
+  }, [btnRef]);
 
   return (
     <footer ref={footerRef}>
@@ -59,27 +96,6 @@ const Footer = () => {
       />
       <div id="footer_overlay">
         <h2>download now</h2>
-        <div id="store_btn_container">
-          <a target="_blank" href="https://play.google.com/store/games">
-            <Image
-              width={150}
-              height={50}
-              src="/images/play-btn.svg"
-              alt="googleplay"
-            />
-          </a>
-          <a
-            target="_blank"
-            href="https://apps.apple.com/in/app/apple-store/id375380948"
-          >
-            <Image
-              width={150}
-              height={50}
-              src="/images/app-btn.svg"
-              alt="appstore"
-            />
-          </a>
-        </div>
         <div id="footer_bottom">
           <h4>Designed with love for players</h4>
           <div id="footer_social">

@@ -7,11 +7,11 @@ import Hero from '@/components/home/Moon/Hero'
 import ShowcaseSection from '@/components/home/ShowcaseSection'
 import StorySection from '@/components/home/StorySection'
 import WhySection from '@/components/home/WhySection'
-import React from 'react'
+import React, { useRef } from 'react'
 
 
 const Home = () => {
-
+const btnRef = useRef(null)
   return (
     <>
       <Galaxy
@@ -23,14 +23,14 @@ const Home = () => {
         hueShift={240}
       />
       <main>
-        <Navbar />
+        <Navbar btnRef={btnRef} />
         <Hero />
         <AboutSection />
         <WhySection />
         <ShowcaseSection />
         <ConqureSection />
         <StorySection />
-        <Footer />
+        <Footer btnRef={btnRef} />
       </main>
     </>
   )

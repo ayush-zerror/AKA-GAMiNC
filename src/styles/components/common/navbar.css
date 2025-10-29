@@ -9,7 +9,7 @@ nav {
   z-index: 99;
   pointer-events: none;
 }
-#nav_logo{
+#nav_logo {
   pointer-events: all;
 }
 
@@ -18,24 +18,28 @@ nav img {
   width: auto;
 }
 
-nav #store_btn_container {
-  margin: 0;
-}
 #store_btn_container {
+  margin: 0;
+  position: fixed;
   display: flex;
   align-items: center;
   gap: 2rem;
-  margin-top: 4rem;
+  width: 25%;
+  top: .5%;
+  left: calc(75% - 3rem);
 }
-#store_btn_container img {
-  height: 3.2rem;
-  width: auto;
-}
+
 #store_btn_container a {
+  width: 50%;
   pointer-events: all;
   transition: scale ease 0.2s;
   display: inline-block;
 }
 #store_btn_container a:hover {
   scale: 1.01;
+}
+
+#store_btn_container img {
+  height: 100%;
+  width: 100%;
 }
