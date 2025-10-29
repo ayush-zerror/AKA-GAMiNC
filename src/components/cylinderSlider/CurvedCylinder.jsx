@@ -117,6 +117,7 @@ const CurvedCylinderWithCards = React.memo(() => {
 });
 
 const Moon = React.memo(() => {
+  const moonRef = useRef();
   const moonTexture = useTexture("/images/orange-moon.webp");
   useEffect(() => {
     if (!moonTexture) return;
@@ -124,9 +125,16 @@ const Moon = React.memo(() => {
     moonTexture.magFilter = THREE.LinearFilter;
   }, [moonTexture]);
 
+    useFrame(() => {
+    if (moonRef.current) {
+      moonRef.current.rotation.z -= 0.001; // adjust speed here (lower = slower)
+    }
+  });
+
+
   return (
-    <mesh position={[0, 0, 0]}>
-      <planeGeometry args={[8.2, 8.2]} />
+    <mesh ref={moonRef} position={[0, 0, 0]}>
+      <circleGeometry args={[4, 64]} />
       <meshStandardMaterial
         map={moonTexture}
         transparent
