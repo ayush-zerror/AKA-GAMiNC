@@ -15,22 +15,46 @@
   justify-content: flex-end;
   overflow: hidden;
 }
-#moon_container #white-moon {
+#moon_wrap {
+  position: relative;
   width: 70%;
   height: auto;
   position: absolute;
   top: 50%;
   left: 55%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
+}
+#moon_container #white-moon {
+  width: 100%;
+  height: 100%;
   display: block;
 }
-#spaceship{
+#platform_container{
+  position: absolute;
+  top: -18%;
+  left: 20%;
+  width: 50%;
+  transform: scale(.2);
+}
+#astronaut{
+  width: 50%;
+  height: auto;
+  position: absolute;
+  top: -15%;
+  left: 47%;
+  transform: translate(-50%,0);
+}
+#platform_container #platform{
+  width: 100%;
+  height: auto;
+}
+#spaceship {
   width: 202%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
   object-fit: cover;
   object-position: top;
 }
@@ -58,7 +82,6 @@
   paint-order: stroke fill;
   text-transform: uppercase;
 }
-
 
 /* about_section */
 
@@ -299,10 +322,6 @@
   }
 }
 
-
-
-
-
 .card_wrapper {
   width: 100%;
   height: 278px;
@@ -352,7 +371,7 @@
   font-weight: 400;
   font-size: 1.3rem;
   line-height: 1.15;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
   color: #fff;
   position: relative;
   pointer-events: all;
