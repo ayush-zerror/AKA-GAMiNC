@@ -1,27 +1,32 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const Footer = () => {
+  const footerRef = useRef(null);
   const footerMoonRef = useRef(null);
 
   useEffect(() => {
+    const footer = footerRef.current;
     const moon = footerMoonRef.current;
+    if (!footer || !moon) return;
 
     const handleMove = (e) => {
-      const rect = moon.getBoundingClientRect();
-      const x = (e.clientX - (rect.left + rect.width / 2)) * 0.015;
-      const y = (e.clientY - (rect.top + rect.height / 2)) * 0.015;
+      const rect = footer.getBoundingClientRect();
 
-      gsap.to(moon, {
-        x,
-        y,
-        duration: 1.2,
-        ease: "power3.out",
-      });
+      // only animate if mouse is vertically within footer area
+      if (e.clientY >= rect.top && e.clientY <= rect.bottom) {
+        const x = (e.clientX - (rect.left + rect.width / 2)) * 0.015;
+        const y = (e.clientY - (rect.top + rect.height / 2)) * 0.015;
+
+        gsap.to(moon, {
+          x,
+          y,
+          duration: 1.2,
+          ease: "power3.out",
+        });
+      }
     };
 
     const handleLeave = () => {
@@ -43,7 +48,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer>
+    <footer ref={footerRef}>
       <Image
         id="footer-moon"
         ref={footerMoonRef}
@@ -55,7 +60,7 @@ const Footer = () => {
       <div id="footer_overlay">
         <h2>download now</h2>
         <div id="store_btn_container">
-          <a target="_black" href="https://play.google.com/store/games">
+          <a target="_blank" href="https://play.google.com/store/games">
             <Image
               width={150}
               height={50}
@@ -64,7 +69,7 @@ const Footer = () => {
             />
           </a>
           <a
-            target="_black"
+            target="_blank"
             href="https://apps.apple.com/in/app/apple-store/id375380948"
           >
             <Image
