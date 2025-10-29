@@ -65,6 +65,7 @@ const TvSlider = () => {
                 height={1000}
                 src={slide.character}
                 alt={`character ${index + 1}`}
+                priority
               />
             </div>
           </SwiperSlide>
