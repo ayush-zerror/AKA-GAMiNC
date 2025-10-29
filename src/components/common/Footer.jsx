@@ -1,19 +1,59 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 const Footer = () => {
+  const footerMoonRef = useRef(null);
+
+  useEffect(() => {
+    const moon = footerMoonRef.current;
+
+    const handleMove = (e) => {
+      const rect = moon.getBoundingClientRect();
+      const x = (e.clientX - (rect.left + rect.width / 2)) * 0.015;
+      const y = (e.clientY - (rect.top + rect.height / 2)) * 0.015;
+
+      gsap.to(moon, {
+        x,
+        y,
+        duration: 1.2,
+        ease: "power3.out",
+      });
+    };
+
+    const handleLeave = () => {
+      gsap.to(moon, {
+        x: 0,
+        y: 0,
+        duration: 1.5,
+        ease: "power2.out",
+      });
+    };
+
+    window.addEventListener("mousemove", handleMove);
+    window.addEventListener("mouseleave", handleLeave);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMove);
+      window.removeEventListener("mouseleave", handleLeave);
+    };
+  }, []);
+
   return (
     <footer>
       <Image
         id="footer-moon"
+        ref={footerMoonRef}
         width={1000}
         height={1000}
         src="/images/footermoon.webp"
         alt="moon"
       />
       <div id="footer_overlay">
-        <h2>Get in touch</h2>
+        <h2>download now</h2>
         <div id="store_btn_container">
           <a target="_black" href="https://play.google.com/store/games">
             <Image

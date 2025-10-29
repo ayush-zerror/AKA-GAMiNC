@@ -1,16 +1,19 @@
 footer {
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 
 #footer-moon {
-  width: 100%;
+  width: 105%;
   height: auto;
   display: block;
   object-fit: cover;
   z-index: 2;
   position: relative;
+  margin-left: -2.5%;
+  margin-bottom: -2.5%;
 }
 
 #footer_overlay {
@@ -28,7 +31,7 @@ footer {
 #footer_overlay h2 {
   font-family: PlayPretend;
   font-weight: 400;
-  font-size: 12rem;
+  font-size: 10rem;
   text-align: center;
   white-space: nowrap;
   color: #fff;
