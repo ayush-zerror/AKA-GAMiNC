@@ -117,7 +117,7 @@ const CurvedCylinderWithCards = React.memo(() => {
 });
 
 const Moon = React.memo(() => {
-  const moonTexture = useTexture("/images/showcase-moon.webp");
+  const moonTexture = useTexture("/images/orange-moon.webp");
   useEffect(() => {
     if (!moonTexture) return;
     moonTexture.minFilter = THREE.LinearFilter;

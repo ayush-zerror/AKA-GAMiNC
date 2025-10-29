@@ -136,7 +136,7 @@ const Book = () => {
           id="bookmoon"
           width={1000}
           height={1000}
-          src="/images/showcase-moon.webp"
+          src="/images/orange-moon.webp"
           alt="moon"
         />
       </div>
