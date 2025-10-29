@@ -51,8 +51,8 @@ const Footer = ({ btnRef }) => {
       gsap.to(btn, {
         scrollTrigger: {
           trigger: footer,
-          start: "top center",
-          end: "top top",
+          start: "top bottom",
+          end: "top center",
           scrub: 1,
           // markers: true,
         },

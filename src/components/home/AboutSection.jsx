@@ -140,7 +140,7 @@ const AboutSection = ({ newSection }) => {
       // Moon + text movement
       tlMoon
         .to(moonRef.current, {
-          scale: 3,
+          scale: 3.8,
           x: xOffset,
           y: yOffset,
           duration: 1.5,
