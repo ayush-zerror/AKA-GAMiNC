@@ -340,6 +340,8 @@ nav #store_btn_container{
   position: relative;
   z-index: 2;
 }
+
+
 #why_shadow {
   position: absolute;
   top: 50%;
@@ -365,6 +367,39 @@ nav #store_btn_container{
 .card_wrapper {
   width: 100%;
   height: 278px;
+  animation: floatY 4s ease-in-out infinite;
+}
+
+/* Different animation speeds for each card */
+#why_cards .card_wrapper:nth-child(1) {
+  animation-duration: 2.9s;
+}
+#why_cards .card_wrapper:nth-child(2) {
+  animation-duration: 2.5s;
+}
+#why_cards .card_wrapper:nth-child(3) {
+  animation-duration: 2.7s;
+}
+
+/* Optional: small delay so they don’t move in sync */
+#why_cards .card_wrapper:nth-child(2) {
+  animation-delay: 0.8s;
+}
+#why_cards .card_wrapper:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+/* Float animation keyframes */
+@keyframes floatY {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .why_card {
   width: 55%;
@@ -419,7 +454,7 @@ nav #store_btn_container{
 .card_wrapper:nth-child(2) {
   display: flex;
   justify-content: flex-end;
-  transform: translateY(4%);
+  margin-bottom: -2%;
 }
 .card_wrapper:nth-child(2) .why_card {
   background-color: #ffc32a;
@@ -530,7 +565,7 @@ nav #store_btn_container{
 }
 .card_wrapper:nth-child(3) #card_tag {
   -webkit-text-stroke: 2px #b34efe;
-  transform: translateX(-10%) translateY(-45%) rotate(-5deg);
+  transform: translateX(-10%) translateY(-45%) rotate(-5deg) ;
   padding-top: 0.5rem;
 }
 .card_wrapper:nth-child(3) #card_tag_bg {
