@@ -17,3 +17,25 @@ nav img {
   height: 4.5rem;
   width: auto;
 }
+
+nav #store_btn_container {
+  margin: 0;
+}
+#store_btn_container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+#store_btn_container img {
+  height: 3.2rem;
+  width: auto;
+}
+#store_btn_container a {
+  pointer-events: all;
+  transition: scale ease 0.2s;
+  display: inline-block;
+}
+#store_btn_container a:hover {
+  scale: 1.01;
+}

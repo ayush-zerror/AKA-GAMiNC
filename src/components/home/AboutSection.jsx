@@ -42,7 +42,8 @@ const AboutSection = ({ newSection }) => {
       const tltext = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 65%",
+          start: "top 80%",
+          end: "top 20%",
           toggleActions: "play none none reverse",
           markers: false,
         },
@@ -90,11 +91,11 @@ const AboutSection = ({ newSection }) => {
           {
             y: 0,
             opacity: 1,
-            duration: 0.8,
+            duration: 0.6,
             stagger: { amount: 0.6 },
             ease: "power2.out",
           },
-          "+=0.2"
+          "+=0.1"
         )
         .fromTo(
           splitText2.lines,
@@ -102,7 +103,7 @@ const AboutSection = ({ newSection }) => {
           {
             y: 0,
             opacity: 1,
-            duration: 0.8,
+            duration: 0.6,
             stagger: { amount: 0.6 },
             ease: "power2.out",
           },
