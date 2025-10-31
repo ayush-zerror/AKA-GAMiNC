@@ -52,10 +52,19 @@ video {
   height: auto;
 }
 
-
-#moon_slider{
+#moon_slider {
   width: 100%;
   height: 110vh;
   overflow: hidden;
   margin: 6rem 0 8rem;
+}
+
+#astronaut_fixed_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
 }
