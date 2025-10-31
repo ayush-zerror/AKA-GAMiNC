@@ -45,7 +45,7 @@ main {
     #000910 80%
   );
 }
-.galaxy-container canvas{
+.galaxy-container canvas {
   width: 100% !important;
   height: 100% !important;
 }
@@ -73,12 +73,47 @@ video {
   pointer-events: none;
 }
 
-
-#fixed_astro{
+#fixed_astro {
   position: absolute;
   height: 15rem;
   width: auto;
   top: -50%;
   left: 50%;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
+}
+
+#fixed_social {
+  position: fixed;
+  left: 1rem;
+  z-index: 99;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+#social_box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #052753;
+  padding:.8rem .8rem;
+  border-radius: 5px;
+  border: 4px solid #1362A2;
+  pointer-events: all;
+}
+
+#social_box img{
+  height: 1.5rem !important;
+  width: auto;
+  filter: invert(1) !important;
+  transition: scale ease .3s;
+  will-change: scale;
+}
+
+#social_box img:hover{
+  scale: 1.05;
 }

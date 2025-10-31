@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Footer = ({ btnRef }) => {
+const Footer = ({ btnRef ,social }) => {
   const footerRef = useRef(null);
   const footerMoonRef = useRef(null);
 
@@ -15,7 +15,7 @@ const Footer = ({ btnRef }) => {
     const moon = footerMoonRef.current;
     const btn = btnRef?.current;
 
-    if (!footer || !moon || !btn) return;
+    if (!footer || !moon || !btn || !social) return;
 
     const initAnimations = () => {
       // 🌕 mouse move
@@ -60,6 +60,18 @@ const Footer = ({ btnRef }) => {
         bottom: "10.5rem",
         xPercent: -50,
         scale: 1.5,
+        duration: 1,
+        ease: "linear",
+      });
+       gsap.to(social.current, {
+        scrollTrigger: {
+          trigger: footer,
+          start: "top bottom",
+          end: "top center",
+          scrub: 1,
+          // markers: true,
+        },
+        opacity:0,
         duration: 1,
         ease: "linear",
       });

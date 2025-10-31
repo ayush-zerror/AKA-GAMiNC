@@ -9,6 +9,7 @@ import ShowcaseSection from "@/components/home/ShowcaseSection";
 import StorySection from "@/components/home/StorySection";
 import WhySection from "@/components/home/WhySection";
 import Image from "next/image";
+import Link from "next/link";
 
 const Home = () => {
   const btnRef = useRef(null);
@@ -23,6 +24,7 @@ const Home = () => {
     story: useRef(null),
     footer: useRef(null),
     astro: useRef(null),
+    social: useRef(null),
   };
 
   return (
@@ -44,6 +46,27 @@ const Home = () => {
           alt="astronaut"
           ref={sectionRefs.astro}
         />
+      </div>
+
+      <div id="fixed_social">
+        <div id="social_box" ref={sectionRefs.social}>
+          <Link href="/">
+            <Image
+              width={1000}
+              height={1000}
+              src="/images/insta.webp"
+              alt="instagram"
+            />
+          </Link>
+          <Link href="/">
+            <Image
+              width={1000}
+              height={1000}
+              src="/images/linkedin.webp"
+              alt="linkedin"
+            />
+          </Link>
+        </div>
       </div>
 
       <main>
@@ -74,7 +97,7 @@ const Home = () => {
         </div>
 
         <div ref={sectionRefs.footer}>
-          <Footer btnRef={btnRef} />
+          <Footer btnRef={btnRef} social={sectionRefs.social} />
         </div>
       </main>
     </>
