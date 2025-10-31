@@ -144,7 +144,7 @@ const AboutSection = ({ newSection }) => {
           x: xOffset,
           y: yOffset,
           duration: 1.5,
-          ease: "power2.inOut",
+          ease: "linear",
         })
         .to(text1Ref.current, { x: -50, duration: 1.2 }, "<")
         .to(text2Ref.current, { x: 50, duration: 1.2 }, "<");
