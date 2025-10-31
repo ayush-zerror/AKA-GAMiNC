@@ -236,7 +236,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 65vh 0 30vh;
+  padding: 70vh 0 30vh;
 }
 
 #why_title {
@@ -315,7 +315,7 @@
   align-items: center; /* centers inner content horizontally */
   justify-content: center; /* centers vertically if height set */
   padding: 3rem 8rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
   position: relative;
   z-index: 2;
 }
