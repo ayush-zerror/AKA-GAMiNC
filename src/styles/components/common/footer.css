@@ -68,9 +68,6 @@ footer {
   font-size: 1.5rem;
   line-height: 1;
   color: #053564;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 #footer_social img {

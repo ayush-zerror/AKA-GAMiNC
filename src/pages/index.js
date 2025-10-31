@@ -8,6 +8,7 @@ import Hero from "@/components/home/Hero";
 import ShowcaseSection from "@/components/home/ShowcaseSection";
 import StorySection from "@/components/home/StorySection";
 import WhySection from "@/components/home/WhySection";
+import Image from "next/image";
 
 const Home = () => {
   const btnRef = useRef(null);
@@ -21,6 +22,7 @@ const Home = () => {
     conqure: useRef(null),
     story: useRef(null),
     footer: useRef(null),
+    astro: useRef(null),
   };
 
   return (
@@ -33,7 +35,16 @@ const Home = () => {
         saturation={0.1}
         hueShift={240}
       />
-      <div id="astronaut_fixed_container"></div>
+      <div id="astronaut_fixed_container">
+        <Image
+          id="fixed_astro"
+          width={1000}
+          height={1000}
+          src="/images/fly-astro.png"
+          alt="astronaut"
+          ref={sectionRefs.astro}
+        />
+      </div>
 
       <main>
         <Navbar btnRef={btnRef} />
@@ -43,11 +54,11 @@ const Home = () => {
         </div>
 
         <div ref={sectionRefs.about}>
-          <AboutSection />
+          <AboutSection astro={sectionRefs.astro} />
         </div>
 
-        <div ref={sectionRefs.why}>
-          <WhySection />
+        <div ref={sectionRefs.why} >
+          <WhySection astro={sectionRefs.astro} />
         </div>
 
         <div ref={sectionRefs.showcase}>

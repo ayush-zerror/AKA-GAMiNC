@@ -46,7 +46,7 @@ const Hero = () => {
         scrollTrigger: {
           trigger: heroRef.current,
           start: "top top",
-          end: "top -130%",
+          end: "top -80%",
           pin: moonRef.current,
           scrub: 1.2,
         },
@@ -61,7 +61,7 @@ const Hero = () => {
       ScrollTrigger.create({
         trigger: heroRef.current,
         start: "top top",
-        end: "top -130%",
+        end: "top -120%",
         pin: contentRef.current,
         scrub: false,
       });
@@ -100,7 +100,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-
         <Image
           id="spaceship"
           width={1000}
@@ -109,14 +108,13 @@ const Hero = () => {
           alt="spaceship"
           priority
         />
-
-        <div id="hero_content" ref={contentRef}>
-          <h2>
-            Step into <br /> the <br /> world of <br /> Gaming
-          </h2>
-        </div>
       </div>
 
+      <div id="hero_content" ref={contentRef}>
+        <h2>
+          Step into <br /> the <br /> world of <br /> Gaming
+        </h2>
+      </div>
       <div id="ship-bottom">
         <Image
           id="spaceship-desk"

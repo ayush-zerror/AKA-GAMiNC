@@ -7,7 +7,7 @@ import React, { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-const AboutSection = ({ newSection }) => {
+const AboutSection = ({ newSection, astro }) => {
   const sectionRef = useRef(null);
   const moonRef = useRef(null);
   const text1Ref = useRef(null);
@@ -29,7 +29,8 @@ const AboutSection = ({ newSection }) => {
         !playRef.current ||
         !playBgRef.current ||
         !tagRef.current ||
-        !astroRef.current
+        !astroRef.current ||
+        !astro.current
       )
         return;
 
@@ -140,14 +141,25 @@ const AboutSection = ({ newSection }) => {
       // Moon + text movement
       tlMoon
         .to(moonRef.current, {
-          scale: 3.8,
+          scale: 4,
           x: xOffset,
           y: yOffset,
           duration: 1.5,
           ease: "linear",
         })
         .to(text1Ref.current, { x: -50, duration: 1.2 }, "<")
-        .to(text2Ref.current, { x: 50, duration: 1.2 }, "<");
+        .to(text2Ref.current, { x: 50, duration: 1.2 }, "<")
+        .to(
+          astro.current,
+          {
+            top: "50%", 
+            transform:"translate(-50%,-50%)",
+            duration: 1.2,
+            ease: "power2.out",
+          },
+          "<"
+        );
+        
 
       return () => {
         tltext.scrollTrigger?.kill();

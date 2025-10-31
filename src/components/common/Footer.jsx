@@ -95,9 +95,8 @@ const Footer = ({ btnRef }) => {
         alt="moon"
       />
       <div id="footer_overlay">
-        <h2>download now</h2>
+        <h2>Download Now!!</h2>
         <div id="footer_bottom">
-          <h4>Designed with love for players</h4>
           <div id="footer_social">
             Follow us on
             <Link href="/">

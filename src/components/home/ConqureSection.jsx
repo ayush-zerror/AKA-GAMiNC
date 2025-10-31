@@ -103,7 +103,6 @@ const ConqureSection = () => {
           </span>
 
           <TvSlider />
-          <button id="play_game_btn">Play Games</button>
         </div>
       </div>
 

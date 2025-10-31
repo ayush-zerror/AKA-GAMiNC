@@ -7,7 +7,7 @@ import React, { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-const WhySection = () => {
+const WhySection = ({astro}) => {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const hystRef = useRef(null);
@@ -86,13 +86,34 @@ const WhySection = () => {
         !hystRef.current ||
         !hystBgRef.current ||
         !astroRef.current ||
-        !cardsContainerRef.current
+        !cardsContainerRef.current ||
+        !astro.current
       )
         return;
 
       const splitTitle = new SplitText(titleRef.current.querySelector("h2"), {
         type: "lines",
       });
+
+       const astroTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top bottom",
+          end: "top top",
+          scrub:1.2
+        },
+      })
+      .to(
+          astro.current,
+          {
+            top: "-50%",
+            left: "100%",
+            transform:"translate(0%,0%)",
+            duration: 1.2,
+            ease: "power2.out",
+          },
+          "<"
+        )
 
       // === MAIN INTRO TIMELINE ===
       const tl = gsap.timeline({
