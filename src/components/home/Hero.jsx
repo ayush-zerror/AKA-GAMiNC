@@ -107,6 +107,7 @@ const Hero = () => {
           height={1000}
           src="/images/ship-top.svg"
           alt="spaceship"
+          priority
         />
 
         <div id="hero_content" ref={contentRef}>
@@ -123,6 +124,7 @@ const Hero = () => {
           height={1000}
           src="/images/ship-bottom.svg"
           alt="spaceship-desk"
+          priority
         />
       </div>
     </div>
