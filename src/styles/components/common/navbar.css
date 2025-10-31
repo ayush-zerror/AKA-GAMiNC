@@ -23,14 +23,17 @@ nav img {
   position: fixed;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 2rem;
   width: 25%;
-  top: .5%;
+  height: 3.2rem;
+  bottom: calc(100% - 4.2rem);
   left: calc(75% - 3rem);
 }
 
 #store_btn_container a {
-  width: 50%;
+  width: fit-content;
+  height: 100%;
   pointer-events: all;
   transition: scale ease 0.2s;
   display: inline-block;

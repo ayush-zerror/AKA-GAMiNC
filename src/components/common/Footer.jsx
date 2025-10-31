@@ -57,7 +57,7 @@ const Footer = ({ btnRef }) => {
           // markers: true,
         },
         left: "50%",
-        top: "70%",
+        bottom: "10.5rem",
         xPercent: -50,
         scale: 1.5,
         duration: 1,
